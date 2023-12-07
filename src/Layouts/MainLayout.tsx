@@ -1,11 +1,13 @@
-import React from 'react';
+import { Footer, Navbar } from "@/components";
 
-const MainLayout = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
 };
 
 export default MainLayout;

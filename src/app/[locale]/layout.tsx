@@ -4,7 +4,8 @@ import "@/assests/styles/global.css";
 
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components";
+
+import MainLayout from "@/Layouts/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +28,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

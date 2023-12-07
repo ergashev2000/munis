@@ -13,6 +13,7 @@ import Logo from "@/assests/images/logo.png";
 
 import {
   CartIcon,
+  CloseIcon,
   HeartIcon,
   LocationIcon,
   MenuIcon,
@@ -41,7 +42,6 @@ const Index = () => {
     <>
       <header className="relative">
         {isOpenCatalog && <Catalog />}
-
         <div className="bg-black text-[#f7f7f7]">
           <div className="container mx-auto flex-between h-7 w-full">
             <div className="flex-y-center gap-5">
@@ -80,7 +80,11 @@ const Index = () => {
                 }`}
               >
                 <h5 className="font-semibold px-1 pt-1">Tilni tanlang</h5>
-                <Link href={"/uz"} className="flex-y-center gap-2 px-1">
+                <Link
+                  href={"/uz"}
+                  locale="uz"
+                  className="flex-y-center gap-2 px-1"
+                >
                   <input
                     type="radio"
                     id="lang-uz"
@@ -103,7 +107,11 @@ const Index = () => {
                     O&apos;zbekcha
                   </label>
                 </Link>
-                <Link href={"/ru"} className="flex-y-center gap-2 p-1">
+                <Link
+                  href={"/ru"}
+                  locale="ru"
+                  className="flex-y-center gap-2 p-1"
+                >
                   <input
                     type="radio"
                     id="lang-en"
@@ -142,10 +150,10 @@ const Index = () => {
               />
             </Link>
             <button
-              className="bg-red-500 py-1 px-2 rounded text-white flex-y-center gap-2"
+              className="bg-red-500 py-1 px-4 rounded text-white flex-y-center gap-2"
               onClick={handleOpenCatalog}
             >
-              <MenuIcon /> Katalog
+              {isOpenCatalog ? <CloseIcon /> : <MenuIcon />} Katalog
             </button>
             <div className="max-w-xl w-full border-2 border-red-500 rounded flex-y-center overflow-hidden">
               <input
@@ -158,21 +166,31 @@ const Index = () => {
               </button>
             </div>
           </div>
-          <div className="flex justify-end items-center w-1/4 gap-4">
-            <button className="text-[12px] font-semibold flex-center flex-col hover:bg-[#f7f7f7] py-0.5 w-14 rounded">
+          <div className="flex justify-end items-center w-1/4 gap-4 [&>button]:text-[12px] [&>button]:font-semibold [&>button]:flex-center [&>button]:flex-col [&>button]:py-0.5 [&>button]:w-14 [&>button]:rounded">
+            <button className="hover:bg-[#f7f7f7]">
               <UserIcon />
               <span>Kirish</span>
             </button>
-            <button className="text-[12px] font-semibold flex-center flex-col hover:bg-[#f7f7f7] py-0.5 w-14 rounded">
+            <button className="hover:bg-[#f7f7f7]">
               <HeartIcon />
               <span>Saralangan</span>
             </button>
-            <button className="text-[12px] font-semibold flex-center flex-col hover:bg-[#f7f7f7] py-0.5 w-14 rounded">
+            <button className="hover:bg-[#f7f7f7]">
               <CartIcon />
               <span>Savatcha</span>
             </button>
           </div>
         </div>
+        <nav className="container mx-auto">
+          <ul className="flex-y-center gap-5 pb-4">
+            <li>
+              <Link href={"/"}>Salom</Link>
+            </li>
+            <li>
+              <Link href={"/"}>Salom</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );

@@ -4,6 +4,10 @@ const withNextIntl = require("next-intl/plugin")(
     './src/i18n.ts'
 );
 
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["firebasestorage.googleapis.com"],
+  },
+};
 
 module.exports = withNextIntl(nextConfig);

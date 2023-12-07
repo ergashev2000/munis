@@ -20,7 +20,7 @@ const Index = () => {
   const [hoveredCategory, setHoveredCategory] = useState(catalogData[0]?.category);
 
   return (
-    <nav className="h-[calc(100vh-130px)] w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex">
+    <nav className="h-[calc(100vh-130px)] w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex z-10 bg-white">
       <aside className="w-max border-r border-gray-400  py-5">
         <ul className="space-y-1">
           {catalogData.map(item => (
