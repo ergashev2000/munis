@@ -73,14 +73,17 @@ export const UserIcon: FC = () => (
   </svg>
 );
 
-export const HeartIcon: FC = () => (
+interface HeartIconProps {
+  color?: string;
+}
+export const HeartIcon: FC<HeartIconProps> = ({ color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={color || "#000"}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"

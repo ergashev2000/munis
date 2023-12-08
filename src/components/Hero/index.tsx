@@ -12,7 +12,6 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-import Card from "../Card";
 
 const index = () => {
   const data = [
@@ -42,6 +41,7 @@ const index = () => {
         slidesPerView={1}
         spaceBetween={10}
         effect="fade"
+        loop={true}
         autoplay={{
           delay: 8000,
           disableOnInteraction: false,

@@ -139,58 +139,64 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex container mx-auto justify-between items-center w-full py-4">
-          <div className="flex-y-center gap-10 w-3/4">
-            <Link href={"/"}>
-              <Image
-                src={Logo}
-                alt="Munis savdo logo"
-                width={120}
-                height={40}
-              />
-            </Link>
-            <button
-              className="bg-red-500 py-1 px-4 rounded text-white flex-y-center gap-2"
-              onClick={handleOpenCatalog}
-            >
-              {isOpenCatalog ? <CloseIcon /> : <MenuIcon />} Katalog
-            </button>
-            <div className="max-w-xl w-full border-2 border-red-500 rounded flex-y-center overflow-hidden">
-              <input
-                type="search"
-                placeholder="Qidirish"
-                className="outline-none h-8 px-4 w-full py-2"
-              />
-              <button className="w-20 h-8 bg-[#f7f7f7] flex-center">
-                <SearchIcon />
+        <div className="bg-white w-full">
+          <div className="flex container mx-auto justify-between items-center w-full py-4">
+            <div className="flex-y-center gap-10 w-3/4">
+              <Link href={"/"}>
+                <Image
+                  src={Logo}
+                  alt="Munis savdo logo"
+                  width={120}
+                  height={40}
+                />
+              </Link>
+              <button
+                className="bg-red-500 py-1 px-4 rounded text-white flex-y-center gap-2"
+                onClick={handleOpenCatalog}
+              >
+                {isOpenCatalog ? <CloseIcon /> : <MenuIcon />} Katalog
+              </button>
+              <div className="max-w-xl w-full border-2 border-red-500 rounded flex-y-center overflow-hidden">
+                <input
+                  type="search"
+                  placeholder="Qidirish"
+                  className="outline-none h-8 px-4 w-full py-2"
+                />
+                <button className="w-20 h-8 bg-[#f7f7f7] flex-center">
+                  <SearchIcon />
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-end items-center w-1/4 gap-4 [&>button]:text-[12px] [&>button]:font-semibold [&>button]:flex-center [&>button]:flex-col [&>button]:py-0.5 [&>button]:w-14 [&>button]:rounded">
+              <button className="hover:bg-[#f7f7f7]">
+                <UserIcon />
+                <span>Kirish</span>
+              </button>
+              <button className="hover:bg-[#f7f7f7]">
+                <HeartIcon/>
+                <span>Saralangan</span>
+              </button>
+              <button className="hover:bg-[#f7f7f7]">
+                <CartIcon />
+                <span>Savatcha</span>
               </button>
             </div>
           </div>
-          <div className="flex justify-end items-center w-1/4 gap-4 [&>button]:text-[12px] [&>button]:font-semibold [&>button]:flex-center [&>button]:flex-col [&>button]:py-0.5 [&>button]:w-14 [&>button]:rounded">
-            <button className="hover:bg-[#f7f7f7]">
-              <UserIcon />
-              <span>Kirish</span>
-            </button>
-            <button className="hover:bg-[#f7f7f7]">
-              <HeartIcon />
-              <span>Saralangan</span>
-            </button>
-            <button className="hover:bg-[#f7f7f7]">
-              <CartIcon />
-              <span>Savatcha</span>
-            </button>
-          </div>
+
+          <nav className="container mx-auto">
+            <ul className="flex-y-center gap-5 pb-3 mb-2 [&>li]:text-[15px] font-semibold">
+              <li className="hover:">
+                <Link href={"/"}>AKSIYALAR</Link>
+              </li>
+              <li>
+                <Link href={"/"}>XAVO SOVUTGICHLAR</Link>
+              </li>
+              <li>
+                <Link href={"/"}>SMARTFONLAR</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav className="container mx-auto">
-          <ul className="flex-y-center gap-5 pb-4">
-            <li>
-              <Link href={"/"}>Salom</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Salom</Link>
-            </li>
-          </ul>
-        </nav>
       </header>
     </>
   );

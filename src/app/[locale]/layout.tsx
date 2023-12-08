@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/assests/styles/global.css";
+import "@/assests/styles/global.scss";
 
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";

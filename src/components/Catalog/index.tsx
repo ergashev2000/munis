@@ -7,11 +7,27 @@ import { ArrowRightIcon, Icon1 } from "@/assests/icons/svgicons";
 
 const catalogData = [
   {
-    category: "Smartfonlar va telefonlar 1",
+    category: "Smartfonqlar va telefonlar 1",
     productTypes: ["Type 1.1", "Type 1.2", "Type 1.3"],
   },
   {
-    category: "Kiyim 2",
+    category: "Kiyim w2",
+    productTypes: ["Type 2.1", "Type 2.2", "Type 2.3"],
+  },
+  {
+    category: "Smartfonl2ar va telefonlar 1",
+    productTypes: ["Type 1.1", "Type 1.2", "Type 1.3"],
+  },
+  {
+    category: "Kiyim 32",
+    productTypes: ["Type 2.1", "Type 2.2", "Type 2.3"],
+  },
+  {
+    category: "Smartf4onlar va telefonlar 1",
+    productTypes: ["Type 1.1", "Type 1.2", "Type 1.3"],
+  },
+  {
+    category: "Kiy5im 2",
     productTypes: ["Type 2.1", "Type 2.2", "Type 2.3"],
   },
 ];
@@ -20,15 +36,15 @@ const Index = () => {
   const [hoveredCategory, setHoveredCategory] = useState(catalogData[0]?.category);
 
   return (
-    <nav className="h-[calc(100vh-130px)] w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex z-10 bg-white">
-      <aside className="w-max border-r border-gray-400  py-5">
+    <nav className="h-max w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex z-10 bg-white rounded">
+      <aside className="w-max border-r border-gray-400  p-3">
         <ul className="space-y-1">
           {catalogData.map(item => (
             <li
-              className={`hover:bg-[#f7f7f7] flex-between rounded text-[0.875rem] ${
+              className={`hover:bg-red-500 flex-between rounded text-[0.875rem] ${
                 item.category === hoveredCategory
-                  ? "bg-[#f7f7f7]"
-                  : "bg-[#fff] "
+                  ? "bg-red-500 text-white border border-red-500"
+                  : "bg-[#fff] border border-transparent"
               }`}
               key={item.category}
               onMouseEnter={() => setHoveredCategory(item.category)}

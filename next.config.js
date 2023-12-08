@@ -6,7 +6,7 @@ const withNextIntl = require("next-intl/plugin")(
 
 const nextConfig = {
   images: {
-    domains: ["firebasestorage.googleapis.com"],
+    domains: ["firebasestorage.googleapis.com", "fakeimg.pl", "images.uzum.uz"],
   },
 };
 
