@@ -93,14 +93,14 @@ export const HeartIcon: FC<HeartIconProps> = ({ color }) => (
   </svg>
 );
 
-export const CartIcon: FC = () => (
+export const CartIcon: FC<HeartIconProps> = ({ color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={color || "#000"}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -112,14 +112,14 @@ export const CartIcon: FC = () => (
   </svg>
 );
 
-export const ArrowRightIcon: FC = () => (
+export const ArrowRightIcon: FC<HeartIconProps> = ({ color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#a7a5a5"
+    stroke={color || "#a7a5a5"}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -177,7 +177,6 @@ export const Icon2: FC = () => (
   </svg>
 );
 
-
 export const CloseIcon: FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -193,5 +192,99 @@ export const CloseIcon: FC = () => (
   >
     <path d="M18 6 6 18" />
     <path d="m6 6 12 12" />
+  </svg>
+);
+
+export const Instagram: FC = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 56.7 56.7"
+    xmlSpace="preserve"
+    width={24}
+    height={24}
+  >
+    <path
+      d="M28.2 16.7c-7 0-12.8 5.7-12.8 12.8s5.7 12.8 12.8 12.8S41 36.5 41 29.5s-5.8-12.8-12.8-12.8zm0 21c-4.5 0-8.2-3.7-8.2-8.2s3.7-8.2 8.2-8.2 8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"
+      fill="#ffffff"
+      className="fill-000000"
+    ></path>
+    <circle
+      cx="41.5"
+      cy="16.4"
+      r="2.9"
+      fill="#ffffff"
+      className="fill-000000"
+    ></circle>
+    <path
+      d="M49 8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7 0-14.5 5.8-14.5 14.5v20.5c0 4.3 1.4 8 4.2 10.7 2.7 2.6 6.3 3.9 10.4 3.9h20.4c4.3 0 7.9-1.4 10.5-3.9 2.7-2.6 4.1-6.3 4.1-10.6V19.3c0-4.2-1.4-7.8-4-10.4zm-.4 31c0 3.1-1.1 5.6-2.9 7.3s-4.3 2.6-7.3 2.6H18c-3 0-5.5-.9-7.3-2.6C8.9 45.4 8 42.9 8 39.8V19.3c0-3 .9-5.5 2.7-7.3 1.7-1.7 4.3-2.6 7.3-2.6h20.6c3 0 5.5.9 7.3 2.7 1.7 1.8 2.7 4.3 2.7 7.2v20.6z"
+      fill="#ffffff"
+      className="fill-000000"
+    ></path>
+  </svg>
+);
+
+export const Telegram: FC = () => (
+  <svg
+    viewBox="0 0 256 256"
+    width={24}
+    height={24}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path fill="none" d="M0 0h256v256H0z"></path>
+    <path
+      d="m88 134.9 89.9 79.1a8 8 0 0 0 13.1-4.2l37.6-164.2a8 8 0 0 0-10.7-9.2L33.3 108.9c-7.4 2.9-6.4 13.7 1.4 15.3ZM88 134.9l136.1-98.3"
+      fill="none"
+      stroke="#ffffff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+      className="stroke-000000"
+    ></path>
+    <path
+      d="m132.9 174.4-31.2 31.2A8 8 0 0 1 88 200v-65.1"
+      fill="none"
+      stroke="#ffffff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+      className="stroke-000000"
+    ></path>
+  </svg>
+);
+
+export const Facebook: FC = () => (
+  <svg
+    viewBox="0 0 56.693 56.693"
+    xmlSpace="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+  >
+    <path
+      d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"
+      fill="#ffffff"
+      className="fill-000000"
+    ></path>
+  </svg>
+);
+
+export const Youtube: FC = () => (
+  <svg
+    viewBox="0 0 512 512"
+    width={24}
+    height={24}
+    xmlSpace="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+    fillRule="evenodd"
+    clipRule="evenodd"
+    strokeLinejoin="round"
+    strokeMiterlimit="2"
+  >
+    <path
+      d="M501.303 132.765c-5.887-22.03-23.235-39.377-45.265-45.265C416.106 76.8 256 76.8 256 76.8s-160.107 0-200.039 10.7c-22.026 5.888-39.377 23.235-45.264 45.265C0 172.693 0 256.003 0 256.003s0 83.308 10.697 123.232c5.887 22.03 23.238 39.382 45.264 45.269C95.893 435.2 256 435.2 256 435.2s160.106 0 200.038-10.696c22.03-5.887 39.378-23.239 45.265-45.269 10.696-39.924 10.696-123.232 10.696-123.232s0-83.31-10.696-123.238ZM204.797 332.804V179.201l133.019 76.802-133.019 76.801Z"
+      fillRule="nonzero"
+      fill="#ffffff"
+      className="fill-000000"
+    ></path>
   </svg>
 );

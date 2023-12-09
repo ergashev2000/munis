@@ -5,7 +5,7 @@ import "@/assests/styles/global.scss";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 
-import MainLayout from "@/Layouts/MainLayout";
+import MainLayout from "@/layouts/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
-  const locale = useLocale();
-
   if (!locales.includes(locale as any)) notFound();
 
   return (

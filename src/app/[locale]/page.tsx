@@ -1,15 +1,30 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Category, Hero, NewProducts } from '@/components';
+import React from "react";
+import { useTranslations } from "next-intl";
+
+import {
+  Brands,
+  Category,
+  CategoryProducts,
+  Hero,
+  NewProducts,
+  News,
+  Recommended,
+  Services,
+} from "@/components";
 
 const Page = () => {
-  const t = useTranslations('Index');
+  const t = useTranslations("Index");
 
   return (
-    <main className='min-h-screen container mx-auto'>
+    <main className="min-h-screen container mx-auto">
       <Hero />
+      <Brands />
       <Category />
-      <NewProducts/>
+      <NewProducts />
+      <CategoryProducts />
+      <News />
+      <Services />
+      <Recommended />
     </main>
   );
 };

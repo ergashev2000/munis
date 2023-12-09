@@ -12,7 +12,7 @@ const index = () => {
   return (
     <div className="p-2 rounded-xl bg-white max-w-[300px] relative hover:shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
       <Link href={"/"}>
-        <div className="relative w-full max-w-[360px] group overflow-hidden">
+        <div className="relative w-full max-w-[360px] group overflow-hidden h-64 rounded-lg">
           <Image
             width={300}
             height={400}
@@ -47,15 +47,15 @@ const index = () => {
         <p className="text-[14px] text-opacity-50 ">
           Brend:{" "}
           <Link href={"/"}>
-            <span className="text-opacity-90 underline">Xiomi</span>
+            <span className="text-opacity-90 underline font-semibold">Xiomi</span>
           </Link>
         </p>
         <div className="flex-y-center gap-2 pt-1">
-          <button className="w-[calc(100%-40px)] border border-red-500 rounded-lg bg-red-500 text-white text-[15px] transition-all duration-300 hover:bg-white hover:text-black font-semibold h-11 px-4 hover:border-gray-200">
+          <button className="w-[calc(100%-40px)] border border-gray-200 rounded-lg hover:bg-red-500 hover:text-white text-[15px] transition-all duration-300 text-black font-semibold h-11 px-4 hover:border-red-500">
             Hozirni o`zidayoq xarid qilish
           </button>
-          <button className="min-w-[55px] h-11 border border-gray-300 rounded-lg flex-center">
-            <CartIcon />
+          <button className="min-w-[55px] h-11 border border-red-500   rounded-lg flex-center bg-red-500">
+            <CartIcon  color="#fff"/>
           </button>
         </div>
       </div>

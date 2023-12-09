@@ -173,7 +173,7 @@ const Index = () => {
                 <span>Kirish</span>
               </button>
               <button className="hover:bg-[#f7f7f7]">
-                <HeartIcon/>
+                <HeartIcon />
                 <span>Saralangan</span>
               </button>
               <button className="hover:bg-[#f7f7f7]">
@@ -185,13 +185,13 @@ const Index = () => {
 
           <nav className="container mx-auto">
             <ul className="flex-y-center gap-5 pb-3 mb-2 [&>li]:text-[15px] font-semibold">
-              <li className="hover:">
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>AKSIYALAR</Link>
               </li>
-              <li>
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>XAVO SOVUTGICHLAR</Link>
               </li>
-              <li>
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>SMARTFONLAR</Link>
               </li>
             </ul>
