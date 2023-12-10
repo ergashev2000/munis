@@ -3,7 +3,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="max-w-md rounded-lg hover:shadow-lg hover:bg-white cursor-pointer transition-all duration-300 p-2">
+    <div className="max-w-md rounded-lg hover:shadow-lg hover:bg-white cursor-pointer transition-all duration-300 p-2 bg-white">
       <Image
         src={"https://fakeimg.pl/440x320/282828/eae0d0/?retina=1"}
         alt="Image"

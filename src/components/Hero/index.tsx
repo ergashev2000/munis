@@ -1,17 +1,6 @@
-"use client";
 import React from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  EffectFade,
-  Autoplay,
-} from "swiper/modules";
-
+import CustomSwiper from "../CustomSwiper";
 
 const index = () => {
   const data = [
@@ -29,41 +18,21 @@ const index = () => {
 
   return (
     <div>
-      <Swiper
-        modules={[
-          Autoplay,
-          Navigation,
-          Pagination,
-          Scrollbar,
-          A11y,
-          EffectFade,
-        ]}
-        slidesPerView={1}
-        spaceBetween={10}
+      <CustomSwiper
+        slidesNumber={1}
+        autoplay={8000}
         effect="fade"
-        loop={true}
-        autoplay={{
-          delay: 8000,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          disabledClass: "swiper-button-disabled",
-        }}
+        loop
+        pagination
       >
         {data?.map((item: any) => (
-          <SwiperSlide key={item.id}>
-            <div
-              className="h-[340px] bg-cover bg-center rounded w-full bg-red-500 bg-no-repeat"
-              style={{ backgroundImage: `url(${item?.img})` }}
-            />
-          </SwiperSlide>
+          <div
+            key={item.id}
+            className="h-[340px] bg-cover bg-center rounded w-full  bg-no-repeat"
+            style={{ backgroundImage: `url(${item?.img})` }}
+          />
         ))}
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-      </Swiper>
+      </CustomSwiper>
     </div>
   );
 };

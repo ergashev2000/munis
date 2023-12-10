@@ -20,6 +20,7 @@ import {
   SearchIcon,
   UserIcon,
 } from "@/assests/icons/svgicons";
+import { PhoneNumber } from "@/utils/constants/contact";
 
 const Index = () => {
   const pathname = usePathname();
@@ -52,14 +53,14 @@ const Index = () => {
               <span className="text-[14px]">Bizning do`konlarimiz</span>
             </div>
             <div className="flex-center gap-5 relative">
-              <Link href={"/"}>
-                <div className="text-[14px] flex-center gap-1">
-                  Aloqa markazi :
+              <div className="text-[14px] flex-center gap-1">
+                Aloqa markazi :
+                <Link href={`tel:${PhoneNumber.original_number}`}>
                   <h5 className="text-[15px] font-semibold">
-                    +99871 209 99 44
+                    {PhoneNumber.public_number}
                   </h5>
-                </div>
-              </Link>
+                </Link>
+              </div>
 
               <button
                 className="flex-center text-[14px] gap-1 w-24"
@@ -114,14 +115,14 @@ const Index = () => {
                 >
                   <input
                     type="radio"
-                    id="lang-en"
+                    id="lang-ru"
                     name="lang"
                     value={"/ru"}
                     checked={lang === "/ru"}
                     onChange={handleCheckLang}
                   />
                   <label
-                    htmlFor="lang-en"
+                    htmlFor="lang-ru"
                     className="hover:text-red-500 transition-all duration-300 rounded cursor-pointer flex-y-center gap-1"
                   >
                     <Image
@@ -151,12 +152,13 @@ const Index = () => {
                 />
               </Link>
               <button
-                className="bg-red-500 py-1 px-4 rounded text-white flex-y-center gap-2"
+                className="bg-red-500 py-1 px-3 rounded text-white flex-y-center gap-2"
                 onClick={handleOpenCatalog}
               >
-                {isOpenCatalog ? <CloseIcon /> : <MenuIcon />} Katalog
+                {isOpenCatalog ? <CloseIcon /> : <MenuIcon />}
+                <span> Katalog</span>
               </button>
-              <div className="max-w-xl w-full border-2 border-red-500 rounded flex-y-center overflow-hidden">
+              <div className="max-w-xl w-full border-2 border-gray-300 rounded flex-y-center overflow-hidden">
                 <input
                   type="search"
                   placeholder="Qidirish"

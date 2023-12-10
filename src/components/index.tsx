@@ -1,5 +1,4 @@
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import Hero from "./Hero";
 import Category from "./Category";
 import NewProducts from "./NewProducts";
@@ -8,10 +7,10 @@ import News from "./News";
 import Brands from "./Brands";
 import Services from "./Services";
 import Recommended from "./Recommended";
+import Footer from "./Footer";
 
 export {
   Navbar,
-  Footer,
   Hero,
   Category,
   NewProducts,
@@ -20,4 +19,5 @@ export {
   Brands,
   Services,
   Recommended,
+  Footer,
 };
