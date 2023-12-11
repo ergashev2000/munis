@@ -9,6 +9,8 @@ import Services from "./Services";
 import Recommended from "./Recommended";
 import Footer from "./Footer";
 
+import FilterBar from "./FilterBar";
+
 export {
   Navbar,
   Hero,
@@ -20,4 +22,5 @@ export {
   Services,
   Recommended,
   Footer,
+  FilterBar,
 };

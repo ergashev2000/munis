@@ -11,17 +11,22 @@ const Index = () => {
     <>
       <input
         type="checkbox"
-        id="Artel"
+        id="Artel1"
         className="appearance-none "
         checked={isChecked}
         onChange={handleChange}
       />
-      <span
-        className={`min-h-[20px] min-w-[20px] rounded border border-gray-300 ${
-          isChecked ? "bg-gray-300" : "bg-transparent"
-        } absolute left-0`}
-      />
-      <label htmlFor="Artel">Artel</label>
+
+      <label htmlFor="Artel1">
+        <div className="flex-y-center cursor-pointer">
+          <span
+            className={`min-h-[20px] min-w-[20px] rounded border border-gray-300 ${
+              isChecked ? "bg-red-500" : "bg-transparent"
+            } absolute left-0`}
+          />
+          Bosch
+        </div>
+      </label>
     </>
   );
 };
