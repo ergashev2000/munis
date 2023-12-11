@@ -17,7 +17,7 @@ const index = () => {
   ];
 
   return (
-    <div>
+    <section>
       <CustomSwiper
         slidesNumber={1}
         autoplay={8000}
@@ -33,7 +33,7 @@ const index = () => {
           />
         ))}
       </CustomSwiper>
-    </div>
+    </section>
   );
 };
 

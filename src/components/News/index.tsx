@@ -5,14 +5,14 @@ import NewsCard from "../NewsCard";
 
 const index = () => {
   return (
-    <div>
+    <section>
       <h3 className="text-lg font-semibold transition-all duration-300 group-hover:text-red-500">
         Янгиликлар ва блоглар
       </h3>
       <CustomSwiper slidesNumber={4} between={30}>
         <NewsCard />
       </CustomSwiper>
-    </div>
+    </section>
   );
 };
 

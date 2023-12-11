@@ -7,7 +7,7 @@ import CustomSwiper from "../CustomSwiper";
 
 const index = () => {
   return (
-    <div>
+    <section>
       <div className="pb-6">
         <Link href={"/"}>
           <div className="flex-y-center group w-max">
@@ -59,7 +59,7 @@ const index = () => {
           <Card />
         </CustomSwiper>
       </div>
-    </div>
+    </section>
   );
 };
 

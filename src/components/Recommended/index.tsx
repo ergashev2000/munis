@@ -11,7 +11,7 @@ import Card from "../Card";
 
 const index = () => {
   return (
-    <div>
+    <section>
       <div className="py-10">
         <h3 className="text-lg font-semibold">
           Yaqinda ko`rib chiqilgan mahsulotlar
@@ -33,7 +33,7 @@ const index = () => {
           <div className="swiper-button-next"></div>
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

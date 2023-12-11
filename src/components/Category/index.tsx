@@ -10,7 +10,7 @@ import CategoryIcon from "@/assests/icons/category.webp";
 
 const index = () => {
   return (
-    <div className="py-10">
+    <section className="py-10">
       <h3 className="text-lg font-semibold">Ommabop kategoriyalar</h3>
       <Swiper
         modules={[Navigation, A11y]}
@@ -32,7 +32,7 @@ const index = () => {
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
       </Swiper>
-    </div>
+    </section>
   );
 };
 
