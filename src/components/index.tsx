@@ -10,6 +10,8 @@ import Recommended from "./Recommended";
 import Footer from "./Footer";
 
 import FilterBar from "./FilterBar";
+import ProductSwiper from "./ProductSwiper";
+import Button from "./ui/Button";
 
 export {
   Navbar,
@@ -23,4 +25,6 @@ export {
   Recommended,
   Footer,
   FilterBar,
+  ProductSwiper,
+  Button,
 };

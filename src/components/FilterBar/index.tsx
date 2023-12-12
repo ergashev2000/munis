@@ -13,9 +13,9 @@ export default function Filter() {
 
   return (
     <>
-      <div className="border-b border-gray-300 pt-2 pb-4">
+      <div className="border-b border-gray-300 pt-2">
         <div
-          className={`flex-y-center justify-between gap-5 cursor-pointer transition-all duration-500 text-sm ${
+          className={`flex-y-center justify-between gap-5 cursor-pointer transition-all duration-500 text-sm pb-3 ${
             isOpen ? "text-red-500" : "text-black"
           }`}
           onClick={handleOpen}
@@ -34,7 +34,7 @@ export default function Filter() {
             isOpen ? "max-h-screen" : "max-h-0"
           }`}
         >
-          <ul className="text-[16px] pt-4 space-y-1">
+          <ul className="text-[16px] py-1 space-y-1">
             <li className="relative pl-6 flex items-center">
               <Checkbox />
             </li>

@@ -1,13 +1,32 @@
-.swiper-button-prev, .swiper-button-next{
-background-color: #fff!important;
-width: 45px!important;
-height: 45px!important;
-border-radius: 50%!important;
-opacity: .8!important;
-border: 1px solid rgb(230, 230, 230)!important;
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #fff!important;
+    width: 45px!important;
+    height: 45px!important;
+    border-radius: 50%!important;
+    opacity: .8!important;
+    border: 1px solid rgb(230, 230, 230)!important;
 }
+
 .swiper-button-prev::after,
-.swiper-button-next::after{
-font-size: 20px !important;
-color: #000!important;
+.swiper-button-next::after {
+    font-size: 20px!important;
+    color: #000!important;
+}
+
+.product_swiper .swiper-wrapper {
+    display: flex!important;
+    flex-direction: column!important;
+    height: fit-content;
+}
+
+.product_swiper .swiper-slide {
+    width: 100%!important;
+    border: 1px transparent solid!important;
+}
+
+.product_swiper .swiper-slide-thumb-active {
+    border: 1px gray solid !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
 }
