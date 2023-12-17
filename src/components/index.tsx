@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import FilterBar from "./FilterBar";
 import ProductSwiper from "./ProductSwiper";
 import Button from "./ui/Button";
+import SelectMonth from "./SelectMonth";
 
 export {
   Navbar,
@@ -27,4 +28,5 @@ export {
   FilterBar,
   ProductSwiper,
   Button,
+  SelectMonth,
 };

@@ -3,7 +3,7 @@ export default function Index({ children, outline, classname }: { children: Reac
   return (
     <>
       <button
-        className={`rounded-md max-w-md w-full py-2.5 border font-semibold border-red-500 ${
+        className={`rounded-lg max-w-md w-full py-2.5 border font-semibold border-red-500 ${
           outline ? "bg-red-500" : "bg-transparent"
         } ${classname}`}
       >

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
-import { ProductSwiper } from "@/components";
+import { ProductSwiper, SelectMonth } from "@/components";
 
 import { Button } from "@/components/index";
 
@@ -49,17 +49,24 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="w-1/4 bg-white p-4 rounded-lg h-max space-y-2">
-          <h4 className="px-1.5 text-xl font-semibold">
-            Mahsulot narxi
-          </h4>
-          <p className="text-2xl text-red-500 font-semibold">1 425 000 so`m</p>
-          <Button outline={false} classname="">
-            Savatchaga qo`shish
-          </Button>
-          <Button outline classname="text-white">
-            Sotib olish
-          </Button>
+        <div className="w-1/4 space-y-2">
+          <div className="bg-white p-4 rounded-lg h-max space-y-2">
+            <h4 className="text-lg font-semibold">Mahsulot narxi</h4>
+            <p className="text-2xl text-red-500 font-semibold">
+              1 425 000 so`m
+            </p>
+            <Button outline={false} classname="">
+              Savatchaga qo`shish
+            </Button>
+            <Button outline classname="text-white">
+              Sotib olish
+            </Button>
+          </div>
+
+          <div className="bg-white rounded-lg h-max p-4 font-semibold text-lg">
+            <h4>Muddatli to`lovga</h4>
+            <SelectMonth/>
+          </div>
         </div>
       </div>
     </div>
