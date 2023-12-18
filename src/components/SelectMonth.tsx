@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button } from ".."; // Assuming you have a Button component
+import Button from "./ui/Button";
 import { formatPrice } from "@/utils/formatPrice";
 
 const totleSum = 100000;

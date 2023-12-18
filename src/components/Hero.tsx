@@ -1,6 +1,6 @@
 import React from "react";
 
-import CustomSwiper from "../CustomSwiper";
+import CustomSwiper from "./CustomSwiper";
 
 const index = () => {
   const data = [

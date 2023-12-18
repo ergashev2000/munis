@@ -1,7 +1,7 @@
 import React from "react";
-import CustomSwiper from "../CustomSwiper";
+import CustomSwiper from "./CustomSwiper";
 
-import NewsCard from "../NewsCard";
+import NewsCard from "./NewsCard";
 
 const index = () => {
   return (

@@ -1,10 +1,8 @@
-import { CartIcon, HeartIcon } from "@/assests/icons/svgicons";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-import Img1 from "@/assests/images/img2.jpg";
-import Img2 from "@/assests/images/img3.jpg";
+import { CartIcon, HeartIcon } from "@/assests/icons/svgicons";
 
 const index = () => {
   const linkimg1 = "https://images.uzum.uz/cjh80rbk9fqe2mb6bdt0/original.jpg";
@@ -47,7 +45,9 @@ const index = () => {
         <p className="text-[14px] text-opacity-50 ">
           Brend:{" "}
           <Link href={"/"}>
-            <span className="text-opacity-90 underline font-semibold">Xiomi</span>
+            <span className="text-opacity-90 underline font-semibold">
+              Xiomi
+            </span>
           </Link>
         </p>
         <div className="flex-y-center gap-2 pt-1">
@@ -55,7 +55,7 @@ const index = () => {
             Hozirni o`zidayoq xarid qilish
           </button>
           <button className="min-w-[55px] h-11 border border-red-500   rounded-lg flex-center bg-red-500">
-            <CartIcon  color="#fff"/>
+            <CartIcon color="#fff" />
           </button>
         </div>
       </div>

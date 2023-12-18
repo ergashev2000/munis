@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
 
-import Checkbox from "../ui/Checkbox";
+import Checkbox from "./ui/Checkbox";
 
 export default function Filter() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

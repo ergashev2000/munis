@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import Catalog from "../Catalog";
+import Catalog from "./Catalog";
+import { PhoneNumber } from "@/utils/constants/contact";
 
 import RuFlagIcon from "@/assests/icons/russia.svg";
 import UzFlagIcon from "@/assests/icons/uzbekistan.svg";
@@ -20,13 +21,14 @@ import {
   SearchIcon,
   UserIcon,
 } from "@/assests/icons/svgicons";
-import { PhoneNumber } from "@/utils/constants/contact";
 
 const Index = () => {
   const pathname = usePathname();
 
   const [isChecked, setIsChecked] = useState(false);
   const [isOpenCatalog, setIsOpenCatalog] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const [lang, setLang] = useState(pathname);
 
   const handleOpenModal = () => setIsChecked(prev => !prev);
@@ -39,12 +41,24 @@ const Index = () => {
     if (pathname) setLang(pathname);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 36);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <header className="relative">
         {isOpenCatalog && <Catalog />}
         <div className="bg-black text-[#f7f7f7]">
-          <div className="container mx-auto flex-between h-7 w-full">
+          <div className="container mx-auto flex-between h-[36px] w-full">
             <div className="flex-y-center gap-5">
               <button className="flex-y-center gap-1.5">
                 <LocationIcon />
@@ -140,7 +154,11 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bg-white w-full">
+        <div
+          className={`w-full bg-white flex items-center h-16 z-10 ${
+            scrolled ? "fixed top-0 shadow-md" : ""
+          }`}
+        >
           <div className="flex container mx-auto justify-between items-center w-full py-4">
             <div className="flex-y-center gap-10 w-3/4">
               <Link href={"/"}>
@@ -184,16 +202,20 @@ const Index = () => {
               </button>
             </div>
           </div>
-
+        </div>
+        <div
+          className={`h-16 bg-white ${scrolled ? "block" : "hidden"}`}
+        ></div>
+        <div className="bg-white w-full pt-1">
           <nav className="container mx-auto">
             <ul className="flex-y-center gap-5 pb-3 mb-2 [&>li]:text-[15px] font-semibold">
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>AKSIYALAR</Link>
               </li>
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>XAVO SOVUTGICHLAR</Link>
               </li>
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-red-500 before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
+              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>SMARTFONLAR</Link>
               </li>
             </ul>

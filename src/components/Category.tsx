@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
 import React from "react";
 import Image from "next/image";
 
-
-import CustomSwiper from "../CustomSwiper";
+import CustomSwiper from "./CustomSwiper";
 
 import CategoryIcon from "@/assests/icons/category.webp";
 import Link from "next/link";
@@ -12,7 +11,7 @@ import { useParams, useRouter } from "next/navigation";
 
 const Index = () => {
   const { locale } = useParams();
-  
+
   return (
     <section className="py-10">
       <h3 className="text-lg font-semibold">Ommabop kategoriyalar</h3>

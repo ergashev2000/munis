@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
-import Card from "../Card";
+import Card from "./MainCard";
 
 const index = () => {
   return (

@@ -1,5 +1,12 @@
-
-export default function Index({ children, outline, classname }: { children: React.ReactNode; outline: boolean , classname: string}) {
+export default function Index({
+  children,
+  outline,
+  classname,
+}: {
+  children: React.ReactNode;
+  outline: boolean;
+  classname: string;
+}) {
   return (
     <>
       <button

@@ -29,7 +29,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex gap-1 ">
+    <div className="flex gap-2">
       <Swiper
         onSwiper={handleSetThumb}
         loop={true}

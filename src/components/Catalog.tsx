@@ -33,7 +33,9 @@ const catalogData = [
 ];
 
 const Index = () => {
-  const [hoveredCategory, setHoveredCategory] = useState(catalogData[0]?.category);
+  const [hoveredCategory, setHoveredCategory] = useState(
+    catalogData[0]?.category
+  );
 
   return (
     <nav className="h-max w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex z-10 bg-white rounded">

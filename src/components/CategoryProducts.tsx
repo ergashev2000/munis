@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
-import Card from "../Card";
-import CustomSwiper from "../CustomSwiper";
+import MainCard from "./MainCard";
+import CustomSwiper from "./CustomSwiper";
 
 const index = () => {
   return (
@@ -21,16 +21,11 @@ const index = () => {
         </Link>
 
         <CustomSwiper slidesNumber={5} between={10}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
         </CustomSwiper>
       </div>
 
@@ -47,16 +42,11 @@ const index = () => {
         </Link>
 
         <CustomSwiper slidesNumber={5} between={10}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
         </CustomSwiper>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import React from "react";
-import CustomSwiper from "../CustomSwiper";
+import CustomSwiper from "./CustomSwiper";
 
-import Card from "../Card";
+import MainCard from "./MainCard";
 
 const index = () => {
   return (
@@ -9,7 +9,16 @@ const index = () => {
       <div className="pb-10">
         <h3 className="text-lg font-semibold">Yangi mahsulotlar</h3>
         <CustomSwiper slidesNumber={5} between={20}>
-          <Card />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
+          <MainCard />
         </CustomSwiper>
       </div>
     </section>
