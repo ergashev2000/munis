@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
-import Card from "./MainCard";
+import MainCard from "./MainCard";
 
 const index = () => {
   return (
@@ -27,7 +27,7 @@ const index = () => {
           }}
         >
           <SwiperSlide className="py-5">
-            <Card />
+            <MainCard />
           </SwiperSlide>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>

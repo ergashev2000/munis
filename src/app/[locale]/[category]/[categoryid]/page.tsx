@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
-import Card from "@/components/Card";
+import MainCard from "@/components/MainCard";
 import Checkbox from "@/components/ui/Checkbox";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
@@ -69,11 +69,10 @@ export default function Page() {
               </div>
             </div>
             <div className="grid grid-cols-4 gap-3">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              <MainCard />
+              <MainCard />
+              <MainCard />
+              <MainCard />
             </div>
           </div>
         </div>
