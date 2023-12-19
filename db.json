@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "id": 6822,
+            "name": "Vivo Y27s 8/128 Black",
+            "slug": "smartfon-vivo-y27s-8-128-black",
+            "sku": "7863",
+            "unique_code": "7863",
+            "brand_id": 16,
+            "category_id": 55,
+            "img": "https://api.idea.uz/storage/products/November2023/bBZcNZgOTksiEXptBMyg.png",
+            "second_img": "https://api.idea.uz/storage/products/November2023/OlNwq4UOMwLSpSlvfBD7-small.png",
+            "gallery": [
+                {
+                    "original": "https://api.idea.uz/storage/products/November2023/bBZcNZgOTksiEXptBMyg.png",
+                    "small": "https://api.idea.uz/storage/products/November2023/bBZcNZgOTksiEXptBMyg-small.png",
+                    "medium": "https://api.idea.uz/storage/products/November2023/bBZcNZgOTksiEXptBMyg-medium.png"
+                },
+                {
+                    "original": "https://api.idea.uz/storage/products/November2023/OlNwq4UOMwLSpSlvfBD7.png",
+                    "small": "https://api.idea.uz/storage/products/November2023/OlNwq4UOMwLSpSlvfBD7-small.png",
+                    "medium": "https://api.idea.uz/storage/products/November2023/OlNwq4UOMwLSpSlvfBD7-medium.png"
+                },
+                {
+                    "original": "https://api.idea.uz/storage/products/November2023/9StKOYn40nTXatySS5jc.png",
+                    "small": "https://api.idea.uz/storage/products/November2023/9StKOYn40nTXatySS5jc-small.png",
+                    "medium": "https://api.idea.uz/storage/products/November2023/9StKOYn40nTXatySS5jc-medium.png"
+                }
+            ],
+            "current_price": 2746000,
+            "percent": 12,
+            "discount": 0,
+            "in_stock": 371,
+            "description": null,
+            "body": "<p><strong>Smartfon  Huawei Nova 11i 8/128GB Starry Black</strong></p><p>Smartfon Huawei nova 11i Starry Black&nbsp; qora rangli plastik korpusda taqdim etilgan. Modelda Android operatsion tizimi o‘rnatilgan. Nano-SIM uchun ikkita uya mavjud. Telefon 2,4 gigagertsli, sakkiz yadroli Qualcomm Snapdragon 680  protsessor bilan ishlaydi. Operativ xotira hajmi 8 GB, doimiy xotira & mdash; hajmi 128 GB.<br />Diagonali 6,8 dyuymli Smartfonning sensorli displeyi IPS texnologiyasi asosida ishlangan. Tasvir 2388x1080 piksel o‘lchamda  uzatiladi. 90 Gts  yangilanish chastotasi kadrlar uzilmasdan bir ravonda almashinishini  taʼminlaydi.<br />Smartfon 2G, 3G, 4G (LTE) uyali aloqa standartlari, GLONASS, Beidou, GPS, Galileo, QZSS sunʼiy yoʻldosh navigatsiya tizimlarini qoʻllab-quvvatlaydi. Ma’lumotlarni simsiz uzatish imkoniyati Wi-Fi va Bluetooth modullarining 5.0 versiyasida taqdim etilgan.<br />Model 48+2 megapikselli ruxsatga ega ikkita asosiy kamera bilan jihozlangan. O‘rnatilgan chaqnoq yorug‘lik sharoiti yomon bo‘lganda  ham yuqori sifatli suratlarni  olish imkonini beradi. Bundan tashqari, 16 megapikselli old kamera mavjud. Barmoq izi skaneri tezkor avtorizatsiyani ta’minlaydi. Akkumulyatorning sig‘imi 5000 mA * soatni tashkil etadi. Model tezkor  zaryadlash funksiyasini qo‘llab-quvvatlaydi. Smartfon korpusida quloqchinlar va zaryadlovchini ulash uchun USB Type-C ulagichi mavjud. To‘plamda zaryadlash kabeli bilan  bloki hamda g‘ilof  taqdim etilgan.</p>",
+            "category_name": "Smartfonlar",
+            "category_slug": "smartfonlar",
+            "brand_name": "VIVO",
+            "seo_title": "Смартфон Vivo Y27s 8/128 Black muddatli to'lovga xarid qilish",
+            "meta_description": "Смартфон Vivo Y27s 8/128 Black",
+            "meta_keywords": ""
+        }
+    ]
+}

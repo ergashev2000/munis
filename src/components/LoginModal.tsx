@@ -10,8 +10,7 @@ import { Button } from ".";
 
 export default function LoginModal() {
   const [userPassword, setUserPassword] = useState<string>("");
-    const [phoneValue, setPhoneValue] = useState<string | undefined>("");
-    
+  const [phoneValue, setPhoneValue] = useState<string | undefined>("");
 
   return (
     <>

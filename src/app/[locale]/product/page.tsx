@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
@@ -10,8 +12,35 @@ import {
 } from "@/components";
 
 import { Button } from "@/components/index";
+import { useParams } from "next/navigation";
 
 export default function Page() {
+  const [productData, setProductData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  console.log(loading);
+  console.log(productData);
+  
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/products");
+        console.log(response);
+        
+        const data = await response.json();
+        console.log(data);
+        
+        setProductData(data);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="container mx-auto min-h-screen pb-4">
       <div className="pb-7 pt-5 [&>svg]:stroke-black text-sm flex-y-center gap-2 text-gray-400 [&>*:last-child]:text-black">
