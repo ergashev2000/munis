@@ -4,10 +4,9 @@ import "@/assests/styles/global.scss";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-
 import { notFound } from "next/navigation";
 
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, LoginModal } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,9 +26,14 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
 
+  const test = false;
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
+        
+        {test && <LoginModal />}
+
         <Navbar />
         {children}
         <SpeedInsights />

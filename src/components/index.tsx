@@ -14,6 +14,7 @@ import ProductSwiper from "./ProductSwiper";
 import Button from "./ui/Button";
 import SelectMonth from "./SelectMonth";
 import TabAboutProduct from "./TabAboutProduct";
+import LoginModal from "./LoginModal";
 
 export {
   Navbar,
@@ -26,10 +27,10 @@ export {
   Services,
   Recommended,
   Footer,
-  
   FilterBar,
   ProductSwiper,
   Button,
   SelectMonth,
   TabAboutProduct,
+  LoginModal,
 };
