@@ -31,11 +31,10 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        
         {test && <LoginModal />}
 
         <Navbar />
-        {children}
+        <main className="container mx-auto">{children}</main>
         <SpeedInsights />
         <Footer />
       </body>

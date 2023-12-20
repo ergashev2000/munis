@@ -15,6 +15,8 @@ import Button from "./ui/Button";
 import SelectMonth from "./SelectMonth";
 import TabAboutProduct from "./TabAboutProduct";
 import LoginModal from "./LoginModal";
+import Orders from "./Orders";
+import Settings from "./Settings";
 
 export {
   Navbar,
@@ -33,4 +35,6 @@ export {
   SelectMonth,
   TabAboutProduct,
   LoginModal,
+  Orders,
+  Settings,
 };

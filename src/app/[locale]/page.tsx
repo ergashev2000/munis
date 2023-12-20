@@ -16,7 +16,7 @@ const Page = () => {
   const t = useTranslations("Index");
 
   return (
-    <main className="min-h-screen container mx-auto">
+    <main className="min-h-screen">
       <Hero />
       <Brands />
       <Category />

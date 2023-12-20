@@ -1,9 +1,11 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
+import axios from "axios";
+
+import { Button } from "@/components/index";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
+
 import {
   NewProducts,
   ProductSwiper,
@@ -11,36 +13,16 @@ import {
   TabAboutProduct,
 } from "@/components";
 
-import { Button } from "@/components/index";
-import { useParams } from "next/navigation";
-
-export default function Page() {
-  const [productData, setProductData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  console.log(loading);
-  console.log(productData);
+export default async function Page() {
+// const [productsData, newProductsData] = await Promise.all([
+//   axios
+//     .get("http://localhost:5000/api/products")
+//     .then(response => response.data),
+//   axios
+//     .get("http://localhost:5000/api/users")
+//     .then(response => response.data),
+// ]);
   
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/products");
-        console.log(response);
-        
-        const data = await response.json();
-        console.log(data);
-        
-        setProductData(data);
-      } catch (error) {
-        console.error("Error fetching product data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <div className="container mx-auto min-h-screen pb-4">
       <div className="pb-7 pt-5 [&>svg]:stroke-black text-sm flex-y-center gap-2 text-gray-400 [&>*:last-child]:text-black">
@@ -56,7 +38,7 @@ export default function Page() {
       <div className="flex gap-4">
         <div className="bg-white p-8 rounded-lg w-3/4 h-full">
           <h4 className="pb-4 pt-2 px-1.5 text-xl font-semibold">
-            LG F2M5HS6W kir yuvish mashinasi
+            {/* {data} */}
           </h4>
           <div className="flex gap-8">
             <div className="w-1/2">
@@ -65,13 +47,13 @@ export default function Page() {
             <div className="w-1/2 space-y-2">
               <h4 className="font-semibold">Mahsulot haqida qisqacha</h4>
               <p className="text-sm font-semibold">
-                Brend: <span className="text-red-500">LG</span>
+                Brend: <span className="text-red-500"></span>
               </p>
               <ul className="space-y-2 whitespace-nowrap">
                 <li className="text-[15px] flex-center w-full">
-                  <div>SKU</div>
+                  <p>SKU</p>
                   <hr className="w-full mx-2" />
-                  <div>121341</div>
+                  {/* <p>{data.sku}</p> */}
                 </li>
                 <li className="text-[15px] flex-center w-full">
                   <div>Og`irligi, kg</div>
