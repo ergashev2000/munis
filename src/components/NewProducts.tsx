@@ -3,7 +3,7 @@ import CustomSwiper from "./CustomSwiper";
 
 import MainCard from "./MainCard";
 
-const index = () => {
+export default function NewProducts() {
   return (
     <section>
       <div className="pb-10">
@@ -24,5 +24,3 @@ const index = () => {
     </section>
   );
 };
-
-export default index;
