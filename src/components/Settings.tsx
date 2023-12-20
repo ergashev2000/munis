@@ -70,15 +70,38 @@ export default function Settings() {
               value="+998 90 847 47 37"
             />
           </div>
-          <Button outline classname="text-sm text-white w-auto px-10">
+          <Button outline classname="text-sm text-white w-max px-8">
             O`zgarishlarni saqlash
           </Button>
         </div>
       </div>
       <div className="p-8 rounded-2xl bg-white ">
-        <h3 className="text-xl font-semibold pb-5">
+        <h3 className="text-xl font-semibold">
           Parolni o&apos;zgartirish
         </h3>
+        <div className="space-y-7 py-4">
+          <SettingsInput
+            name="oldpassword"
+            type="text"
+            placeholder="Eski parol"
+            value=""
+          />
+          <SettingsInput
+            name="newpassword"
+            type="text"
+            placeholder=" Parol o'ylab toping"
+            value=""
+          />
+          <SettingsInput
+            name="newpasswordcheck"
+            type="text"
+            placeholder="Parolni tasdiqlang"
+            value=""
+          />
+        </div>
+        <Button outline classname="text-sm text-white w-max px-8">
+          O`zgarishlarni saqlash
+        </Button>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function SettingsInput({ type, name, placeholder, value }: Settin
         />
         <label
           htmlFor={name}
-          className={`text-[14px] absolute bg-white left-2 peer-focus:top-0 top-1/2 -translate-y-1/2 transition-all duration-200 cursor-text ${
+          className={`text-[14px] absolute bg-white left-2 peer-focus:top-0 text-gray-400 top-1/2 -translate-y-1/2 transition-all duration-200 cursor-text ${
             !!value ? "top-[0px]" : ""
           }`}
         >

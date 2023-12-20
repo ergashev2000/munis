@@ -209,14 +209,8 @@ const Index = () => {
         <div className="bg-white w-full pt-1">
           <nav className="container mx-auto">
             <ul className="flex-y-center gap-5 pb-3 mb-2 [&>li]:text-[15px] font-semibold">
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
+              <li className="before:w-full before:h-0.5 before:-bottom-1.5 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
                 <Link href={"/"}>AKSIYALAR</Link>
-              </li>
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
-                <Link href={"/"}>XAVO SOVUTGICHLAR</Link>
-              </li>
-              <li className="before:w-full before:h-0.5 before:bottom-0 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
-                <Link href={"/"}>SMARTFONLAR</Link>
               </li>
             </ul>
           </nav>
