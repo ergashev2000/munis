@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
 import MainCard from "./MainCard";
 import CustomSwiper from "./CustomSwiper";
+import { productsdata } from "../../data";
 
 const index = () => {
   return (
@@ -21,11 +22,9 @@ const index = () => {
         </Link>
 
         <CustomSwiper slidesNumber={5} between={10}>
-          <MainCard />
-          <MainCard />
-          <MainCard />
-          <MainCard />
-          <MainCard />
+          {productsdata.reverse().map(item => (
+            <MainCard key={item.id} item={item} />
+          ))}
         </CustomSwiper>
       </div>
 
@@ -42,11 +41,9 @@ const index = () => {
         </Link>
 
         <CustomSwiper slidesNumber={5} between={10}>
-          <MainCard />
-          <MainCard />
-          <MainCard />
-          <MainCard />
-          <MainCard />
+          {productsdata.reverse().map(item => (
+            <MainCard key={item.id} item={item} />
+          ))}
         </CustomSwiper>
       </div>
     </section>

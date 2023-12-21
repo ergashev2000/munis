@@ -9,6 +9,7 @@ import Checkbox from "@/components/ui/Checkbox";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
 import { FilterBar } from "@/components";
+import { productsdata } from "../../../../../data";
 
 export default function Page() {
   const router = useParams();
@@ -69,10 +70,9 @@ export default function Page() {
               </div>
             </div>
             <div className="grid grid-cols-4 gap-3">
-              <MainCard />
-              <MainCard />
-              <MainCard />
-              <MainCard />
+              {productsdata?.map(item => (
+                <MainCard key={item.id} item={item} />
+              ))}
             </div>
           </div>
         </div>

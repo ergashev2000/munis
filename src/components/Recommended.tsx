@@ -8,6 +8,7 @@ import { Navigation, A11y } from "swiper/modules";
 
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
 import MainCard from "./MainCard";
+import { productsdata } from "../../data";
 
 const index = () => {
   return (
@@ -26,9 +27,12 @@ const index = () => {
             disabledClass: "swiper-button-disabled",
           }}
         >
-          <SwiperSlide className="py-5">
-            <MainCard />
-          </SwiperSlide>
+          {productsdata.slice(0,2).map(item => (
+            <SwiperSlide key={item.id} className="py-5">
+              <MainCard item={item} />
+            </SwiperSlide>
+          ))}
+
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
         </Swiper>

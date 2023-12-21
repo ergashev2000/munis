@@ -22,9 +22,22 @@ import {
   UserIcon,
 } from "@/assests/icons/svgicons";
 
+
+
+const categoryPath = [
+  { id: 1, category: `AKSIYALAR` },
+  { id: 2, category: "XAVO SOVUTGICHLAR" },
+  { id: 3, category: "SMARTFONLAR" },
+  { id: 4, category: "MUZLATGICHLAR" },
+  { id: 5, category: "CHANGYUTGICHLAR" },
+  { id: 6, category: "NOUTBUKLAR" },
+  { id: 7, category: "TELEVIZORLAR" },
+];
+
 export default function Navbar() {
   const { locale: locale } = useParams();
-  
+
+
   const [isChecked, setIsChecked] = useState(false);
   const [isOpenCatalog, setIsOpenCatalog] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -40,9 +53,6 @@ export default function Navbar() {
   useEffect(() => {
     if (locale) setLang(locale);
   }, [locale]);
-
-  console.log(locale);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -183,9 +193,9 @@ export default function Navbar() {
                 <input
                   type="search"
                   placeholder="Qidirish"
-                  className="outline-none h-8 px-4 w-full py-2"
+                  className="outline-none h-8 px-4 w-full py-2 border-2 rounded-l focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
                 />
-                <button className="w-20 h-8 bg-[#f7f7f7] flex-center">
+                <button className="w-20 h-8 bg-[#f7f7f7] flex-center bg-opacity-20">
                   <SearchIcon />
                 </button>
               </div>
@@ -215,10 +225,17 @@ export default function Navbar() {
         <div className={`h-16 bg-white ${scrolled ? "block" : "hidden"}`}></div>
         <div className="bg-white w-full pt-1">
           <nav className="container mx-auto">
-            <ul className="flex-y-center gap-5 pb-3 mb-2 [&>li]:text-[15px] font-semibold">
-              <li className="before:w-full before:h-0.5 before:-bottom-1.5 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left">
-                <Link href={"/"}>AKSIYALAR</Link>
-              </li>
+            <ul
+              className={`flex-y-center gap-10 pb-3 mb-2 [&>li]:text-[15px] font-semibold `}
+            >
+              {categoryPath.map(category => (
+                <li
+                  key={category.id}
+                  className="before:w-full before:h-0.5 before:-bottom-1.5 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left"
+                >
+                  <Link href={"/"}>{category.category}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

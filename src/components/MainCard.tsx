@@ -1,28 +1,30 @@
-import React from "react";
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { CartIcon, HeartIcon } from "@/assests/icons/svgicons";
+import { useParams } from "next/navigation";
 
-const index = () => {
-  const linkimg1 = "https://images.uzum.uz/cjh80rbk9fqe2mb6bdt0/original.jpg";
-  const linkimg2 = "https://images.uzum.uz/cl6bail6sfhgee0l3uc0/original.jpg";
+const MainCard = ({ item }: { item: any }) => {
+const {locale} = useParams();
+
   return (
     <div className="p-2 rounded-xl bg-white max-w-[300px] relative hover:shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
-      <Link href={"/"}>
+      <Link href={`${locale}/data/${item?.id}`}>
         <div className="relative w-full max-w-[360px] group overflow-hidden h-64 rounded-lg">
           <Image
             width={300}
             height={400}
-            src={linkimg1}
+            src={item?.img}
             alt="Main Image"
             className="block w-full max-w-full h-auto rounded-lg hover:scale-105 transition-all duration-300"
           />
-          {linkimg2 && (
+          {item?.img2 && (
             <Image
               width={300}
               height={400}
-              src={linkimg2}
+              src={item?.img2}
               alt="Hover Image"
               className="absolute top-0 right-0 left-0 bottom-0 object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg"
             />
@@ -34,7 +36,9 @@ const index = () => {
       </button>
       <div className="space-y-1.5">
         <Link href={"/"}>
-          <h4 className="font-semibold pt-2 text-red-500">1 999 000 so`m</h4>
+          <h4 className="font-semibold pt-2 text-red-500">
+            {item?.price} so`m
+          </h4>
         </Link>
         <Link
           href={"/"}
@@ -63,4 +67,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default MainCard;
