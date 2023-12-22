@@ -289,7 +289,6 @@ export const Youtube: FC = () => (
   </svg>
 );
 
-
 export const SettingsIcon: FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +306,6 @@ export const SettingsIcon: FC = () => (
     <circle cx="12" cy="12" r="3" />
   </svg>
 );
-
 
 export const OrderCartIcon: FC = () => (
   <svg
@@ -332,7 +330,6 @@ export const OrderCartIcon: FC = () => (
   </svg>
 );
 
-
 export const DownloadIcon: FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -349,5 +346,23 @@ export const DownloadIcon: FC = () => (
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
     <polyline points="7 10 12 15 17 10" />
     <line x1="12" x2="12" y1="15" y2="3" />
+  </svg>
+);
+
+export const MapIcon: FC = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="red"
+    stroke="#fff"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-map-pin"
+  >
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" />
   </svg>
 );

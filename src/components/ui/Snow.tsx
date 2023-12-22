@@ -87,4 +87,5 @@ interface Snowflake {
   radius: number;
   speed: number;
   opacity: number;
+  
 }
