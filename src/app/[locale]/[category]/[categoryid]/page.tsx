@@ -38,8 +38,6 @@ export default function Page() {
           <aside className="bg-white rounded-xl p-6 pt-2 w-1/4">
             <FilterBar />
             <FilterBar />
-            <FilterBar />
-            <FilterBar />
           </aside>
           <div className="">
             <div className="bg-white py-3 mb-4 rounded-lg relative flex justify-end">
