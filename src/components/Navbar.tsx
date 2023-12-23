@@ -22,8 +22,6 @@ import {
   UserIcon,
 } from "@/assests/icons/svgicons";
 
-
-
 const categoryPath = [
   { id: 1, category: `AKSIYALAR` },
   { id: 2, category: "XAVO SOVUTGICHLAR" },
@@ -36,8 +34,6 @@ const categoryPath = [
 
 export default function Navbar() {
   const { locale: locale } = useParams();
-
-
   const [isChecked, setIsChecked] = useState(false);
   const [isOpenCatalog, setIsOpenCatalog] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -51,16 +47,10 @@ export default function Navbar() {
   const handleOpenCatalog = () => setIsOpenCatalog(prev => !prev);
 
   useEffect(() => {
-    if (locale) setLang(locale);
-  }, [locale]);
-
-  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 36);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -117,9 +107,8 @@ export default function Navbar() {
                     type="radio"
                     id="lang-uz"
                     name="lang"
-                    value={"/uz"}
                     onChange={handleCheckLang}
-                    checked={lang === "/uz"}
+                    checked={lang === "uz"}
                     className="my-2 bg-red-500 text-red-500"
                   />
                   <label
@@ -144,8 +133,7 @@ export default function Navbar() {
                     type="radio"
                     id="lang-ru"
                     name="lang"
-                    value={"/ru"}
-                    checked={lang === "/ru"}
+                    checked={lang === "ru"}
                     onChange={handleCheckLang}
                   />
                   <label

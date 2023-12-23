@@ -42,6 +42,7 @@ export default function Branchs() {
       pathElement.style.fill = "";
     }
   };
+
   return (
     <section>
       <div className="flex items-center gap-10">

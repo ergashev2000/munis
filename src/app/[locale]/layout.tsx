@@ -29,7 +29,6 @@ export default function RootLayout({
 
   const test = false;
 
-
   return (
     <html lang={locale}>
       <body className={inter.className}>
