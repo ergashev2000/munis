@@ -11,7 +11,7 @@ const {locale} = useParams();
 
   return (
     <div className="p-2 rounded-xl bg-white max-w-[300px] relative hover:shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
-      <Link href={`${locale}/data/${item?.id}`}>
+      <Link href={`${locale}/product/${item?.id}`}>
         <div className="relative w-full max-w-[360px] group overflow-hidden h-64 rounded-lg">
           <Image
             width={300}
@@ -35,7 +35,7 @@ const {locale} = useParams();
         <HeartIcon color={"#a6a6a6"} />
       </button>
       <div className="space-y-1.5">
-        <Link href={"/"}>
+        <Link href={`${locale}/product/${item?.id}`}>
           <h4 className="font-semibold pt-2 text-red-500">
             {item?.price} so`m
           </h4>

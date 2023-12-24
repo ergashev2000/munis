@@ -1,17 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Button from "./ui/Button";
 import { formatPrice } from "@/utils/formatPrice";
 
-const totleSum = 100000;
-const percent = [5, 8, 12];
+const totleSum = 1425000;
+const percent = [0, 0, 0];
 
 export default function Index() {
   const [select, setSelect] = useState<number>(3);
   const [totalCalc, setTotalCalc] = useState<string>("");
   const [monthCalc, setMonthCalc] = useState<string>("");
 
-  const handleSelect = (month: number) => setSelect(month);
+  const handleSelect = useCallback((month: number) => setSelect(month), []);
 
   const handleCalculation = (xid: number) => {
     const totle = totleSum + totleSum * (percent[xid] / 100);
@@ -35,8 +35,8 @@ export default function Index() {
   };
 
   useEffect(() => {
-    console.log(handlePercent(select));
-  }, [select, totleSum]);
+    handlePercent(select);
+  }, [select]);
 
   return (
     <div className="space-y-2">

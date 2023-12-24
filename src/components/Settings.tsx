@@ -1,10 +1,51 @@
+"use client";
+
 import { DownloadIcon } from "@/assests/icons/svgicons";
 import Image from "next/image";
-import React from "react";
+import React, { useCallback, useState } from "react";
 import SettingsInput from "./ui/SettingsInput";
 import Button from "./ui/Button";
 
+type UserData = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+};
+
+type ResetPassword = {
+  newPassword: string;
+  oldPassword: string;
+  confirm: string;
+};
+
 export default function Settings() {
+  const [userData, setUserData] = useState<UserData>({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+  });
+
+  const [resetPassword, setResetPassword] = useState<ResetPassword>({
+    oldPassword: "",
+    newPassword: "",
+    confirm: "",
+  });
+
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = e.target;
+
+      if (["oldPassword", "newPassword", "confirm"].includes(name)) {
+        setResetPassword(prevPassword => ({ ...prevPassword, [name]: value }));
+      } else {
+        setUserData(prevUserData => ({ ...prevUserData, [name]: value }));
+      }
+    },
+    []
+  );
+
   return (
     <div className="space-y-8">
       <div className="p-8 rounded-2xl bg-white ">
@@ -47,27 +88,31 @@ export default function Settings() {
               name="lastname"
               type="text"
               placeholder="Familiya"
-              value="Ergashev"
+              value={userData.lastname}
+              handleInputChange={handleInputChange}
             />
             <SettingsInput
               name="firstname"
               type="text"
               placeholder="Ism"
-              value={"Islomjon"}
+              value={userData.firstname}
+              handleInputChange={handleInputChange}
             />
           </div>
           <div className="flex items-center gap-8">
             <SettingsInput
-              name="text"
+              name="email"
               type="text"
               placeholder="E-mail"
-              value=""
+              value={userData.email}
+              handleInputChange={handleInputChange}
             />
             <SettingsInput
-              name="phonenumber"
+              name="phone"
               type="text"
               placeholder="Telefon raqami *"
               value="+998 90 847 47 37"
+              readOnly
             />
           </div>
           <Button outline classname="text-sm text-white w-max px-8">
@@ -76,27 +121,28 @@ export default function Settings() {
         </div>
       </div>
       <div className="p-8 rounded-2xl bg-white ">
-        <h3 className="text-xl font-semibold">
-          Parolni o&apos;zgartirish
-        </h3>
+        <h3 className="text-xl font-semibold">Parolni o&apos;zgartirish</h3>
         <div className="space-y-7 py-4">
           <SettingsInput
-            name="oldpassword"
-            type="text"
+            name="oldPassword"
+            type="password"
             placeholder="Eski parol"
-            value=""
+            value={resetPassword.oldPassword}
+            handleInputChange={handleInputChange}
           />
           <SettingsInput
-            name="newpassword"
-            type="text"
+            name="newPassword"
+            type="password"
             placeholder=" Parol o'ylab toping"
-            value=""
+            value={resetPassword.newPassword}
+            handleInputChange={handleInputChange}
           />
           <SettingsInput
-            name="newpasswordcheck"
-            type="text"
+            name="confirm"
+            type="password"
             placeholder="Parolni tasdiqlang"
-            value=""
+            value={resetPassword.confirm}
+            handleInputChange={handleInputChange}
           />
         </div>
         <Button outline classname="text-sm text-white w-max px-8">

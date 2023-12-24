@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { useParams } from "next/navigation";
 import { Orders, Settings } from "@/components";
-import { OrderCartIcon, SettingsIcon, UserIcon } from "@/assests/icons/svgicons";
+import { OrderCartIcon, SettingsIcon, SignOutIcon, UserIcon } from "@/assests/icons/svgicons";
 
 export default function Page() {
   const { userId } = useParams();
@@ -14,7 +14,7 @@ export default function Page() {
     <div className="flex min-h-[500px] max-w-5xl mx-auto py-8">
       <aside className="w-1/4">
         <h2 className="text-2xl font-semibold pb-5">Islomjon</h2>
-        <ul className="space-y-1">
+        <ul className="space-y-3">
           <li className="w-48">
             <Link href={"orders"}>
               <p
@@ -22,7 +22,7 @@ export default function Page() {
                   userId === "orders" ? "bg-gray-200" : ""
                 }`}
               >
-                <OrderCartIcon/> Buyurtmalarim
+                <OrderCartIcon /> Buyurtmalarim
               </p>
             </Link>
           </li>
@@ -36,6 +36,15 @@ export default function Page() {
                 <SettingsIcon /> Settings
               </p>
             </Link>
+          </li>
+          <li className="w-48">
+            <button>
+              <p
+                className='py-2 px-4 rounded-lg gap-2 flex items-center'
+              >
+                <SignOutIcon /> Chiqish
+              </p>
+            </button>
           </li>
         </ul>
       </aside>

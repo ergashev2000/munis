@@ -1,6 +1,7 @@
 import React from "react";
 
 import CustomSwiper from "./CustomSwiper";
+import Link from "next/link";
 
 const index = () => {
   const data = [
@@ -11,7 +12,7 @@ const index = () => {
     },
     {
       id: 2,
-      name: "islom1",
+      name: "islom2",
       img: "https://firebasestorage.googleapis.com/v0/b/kinomen-d3f05.appspot.com/o/media%2F9I3A4F0fqgQeEWZLhqrSUyMXqZhfY0ABAEcake8N.webp?alt=media&token=479b291e-4939-4fb0-bf5a-f7a85ec72f3e",
     },
   ];
@@ -26,11 +27,12 @@ const index = () => {
         pagination
       >
         {data?.map((item: any) => (
-          <div
-            key={item.id}
-            className="h-[340px] bg-cover bg-center rounded w-full  bg-no-repeat"
-            style={{ backgroundImage: `url(${item?.img})` }}
-          />
+          <Link href={"/"} key={item.id}>
+            <div
+              className="h-[340px] bg-cover bg-center rounded w-full  bg-no-repeat"
+              style={{ backgroundImage: `url(${item?.img})` }}
+            />
+          </Link>
         ))}
       </CustomSwiper>
     </section>

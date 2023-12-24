@@ -14,15 +14,15 @@ import {
 } from "@/components";
 
 export default async function Page() {
-// const [productsData, newProductsData] = await Promise.all([
-//   axios
-//     .get("http://localhost:5000/api/products")
-//     .then(response => response.data),
-//   axios
-//     .get("http://localhost:5000/api/users")
-//     .then(response => response.data),
-// ]);
-  
+  // const [productsData, newProductsData] = await Promise.all([
+  //   axios
+  //     .get("http://localhost:5000/api/products")
+  //     .then(response => response.data),
+  //   axios
+  //     .get("http://localhost:5000/api/users")
+  //     .then(response => response.data),
+  // ]);
+
   return (
     <div className="container mx-auto min-h-screen pb-4">
       <div className="pb-7 pt-5 [&>svg]:stroke-black text-sm flex-y-center gap-2 text-gray-400 [&>*:last-child]:text-black">

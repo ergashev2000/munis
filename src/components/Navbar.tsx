@@ -59,7 +59,6 @@ export default function Navbar() {
   return (
     <>
       <header className="relative">
-        {isOpenCatalog && <Catalog />}
         <div className="bg-black text-[#f7f7f7]">
           <div className="container mx-auto flex-between h-[36px] w-full">
             <div className="flex-y-center gap-5">
@@ -93,7 +92,7 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`w-max h-auto bg-white text-black shadow-md rounded absolute right-0 top-full text-[15px] py-1 px-3 mt-2 ${
+                className={`w-max h-auto bg-white text-black shadow-md rounded absolute right-0 z-20 top-full text-[15px] py-1 px-3 mt-2 ${
                   isChecked ? "block" : "hidden"
                 }`}
               >
@@ -160,7 +159,8 @@ export default function Navbar() {
             scrolled ? "fixed top-0 shadow-md" : ""
           }`}
         >
-          <div className="flex container mx-auto justify-between items-center w-full py-4">
+          <div className="flex container mx-auto justify-between items-center w-full py-4 relative">
+            {isOpenCatalog && <Catalog scrolled={scrolled} />}
             <div className="flex-y-center gap-10 w-3/4">
               <Link href={"/"}>
                 <Image
@@ -174,22 +174,22 @@ export default function Navbar() {
                 className="bg-red-500 py-1 px-3 rounded text-white flex-y-center gap-2"
                 onClick={handleOpenCatalog}
               >
-                <span> Katalog</span>
+                <span>Katalog</span>
                 {isOpenCatalog ? <CloseIcon /> : <MenuIcon />}
               </button>
-              <div className="max-w-xl w-full border-2 border-gray-300 rounded flex-y-center overflow-hidden">
+              <div className="max-w-xl w-full flex-y-center">
                 <input
                   type="search"
-                  placeholder="Qidirish"
-                  className="outline-none h-8 px-4 w-full py-2 border-2 rounded-l focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
+                  placeholder="Mahsulot qidirish"
+                  className="outline-none h-8 px-4 w-full py-2 border-2 rounded-l border-r-0 focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
                 />
-                <button className="w-20 h-8 bg-[#f7f7f7] flex-center bg-opacity-20">
+                <button className="w-20 h-8 bg-[#f7f7f7] flex-center bg-opacity-20 border-2 border-red-500 rounded-r">
                   <SearchIcon />
                 </button>
               </div>
             </div>
             <div className="flex justify-end items-center w-1/4 gap-4 text-[12px] font-semibold">
-              <Link href={`${locale}/cabinet/orders`}>
+              <Link href={`/cabinet/orders`}>
                 <button className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col">
                   <UserIcon />
                   <span>Kirish</span>

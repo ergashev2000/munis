@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ArrowRightIcon, Icon1 } from "@/assests/icons/svgicons";
 
@@ -32,13 +32,17 @@ const catalogData = [
   },
 ];
 
-const Index = () => {
+const Index = ({ scrolled }: { scrolled: boolean}) => {
   const [hoveredCategory, setHoveredCategory] = useState(
     catalogData[0]?.category
   );
 
   return (
-    <nav className="h-max w-full absolute top-full left-1/2 -translate-x-1/2 container mx-auto flex z-10 bg-white rounded">
+    <nav
+      className={`h-max w-full left-1/2 shadow-xl -translate-x-1/2 container mx-auto flex z-10 bg-white rounded fixed ${
+        scrolled ? "top-[80px]" : "top-[120px]"
+      }`}
+    >
       <aside className="w-max border-r border-gray-400  p-3">
         <ul className="space-y-1">
           {catalogData.map(item => (
