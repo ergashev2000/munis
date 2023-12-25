@@ -5,8 +5,6 @@ import MainCard from "./MainCard";
 import { productsdata } from "../../data";
 
 export default function NewProducts() {
-
-  console.log(productsdata);
   
   return (
     <section>

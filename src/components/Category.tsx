@@ -9,34 +9,41 @@ import CategoryIcon from "@/assests/icons/category.webp";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+import Icon1 from "../assests/icons/17e6cca8-ba51-490a-832a-e13d432640d2.svg";
+import Icon2 from "../assests/icons/365fda66-9e5f-44ac-88ea-f25fc90dc9d1.svg";
+import Icon3 from "../assests/icons/888ea4a7-55dc-4da3-b83d-f34a44c25e3c.svg";
 
 const categoryPath = [
   {
     id: 1,
-    category: `AKSIYALAR`,
-    img: "https://mini-io-api.texnomart.uz/catalog/special-category/9/022df0cb-6560-4735-af2b-925057321911.svg",
+    category: `Telvezirlar`,
+    img: Icon1,
   },
   {
     id: 2,
     category: "XAVO SOVUTGICHLAR",
-    img: "https://mini-io-api.texnomart.uz/catalog/special-category/4/08aa7c9c-6fc4-4dd9-af79-669803f79f9a.svg",
+    img: Icon2,
   },
   {
     id: 3,
     category: "SMARTFONLAR",
-    img: "https://mini-io-api.texnomart.uz/catalog/special-category/5/aea82075-5f5c-45fa-bac8-ad86b97bfe27.svg",
+    img: Icon3,
   },
   {
     id: 4,
     category: "MUZLATGICHLAR",
-    img: "https://mini-io-api.texnomart.uz/catalog/special-category/22/4bdb1f78-afd4-4e21-84b8-704678fee731.webp",
+    img: Icon1,
   },
   {
     id: 5,
     category: "CHANGYUTGICHLAR",
-    img: "https://mini-io-api.texnomart.uz/catalog/special-category/10/0fc51fb8-ba7d-42dc-bf7a-f131ac4f83f9.svg",
+    img: Icon2,
   },
-  { id: 6, category: "NOUTBUKLAR" },
+  {
+    id: 6,
+    category: "NOUTBUKLAR",
+    img: Icon3
+  },
   { id: 7, category: "TELEVIZORLAR" },
 ];
 

@@ -46,7 +46,7 @@ export default function Index() {
             key={item}
             onClick={() => handleSelect(item)}
             className={`h-10 w-16 rounded-lg border-2 flex-center border-gray-300 hover:font-semibold  cursor-pointer ${
-              select === item ? "border-red-500 font-semibold" : ""
+              select === item ? "border-red-500 font-semibold bg-red-500 text-white" : ""
             }`}
           >
             {item} oy
@@ -61,7 +61,7 @@ export default function Index() {
           <h4>Umumiy summa:</h4> <span>{totalCalc} so&apos;m</span>
         </div>
       </div>
-      <Button classname="text-white text-sm" outline>
+      <Button classname="text-white text-sm py-3" outline>
         Bo&apos;lib to&apos;lash
       </Button>
     </div>

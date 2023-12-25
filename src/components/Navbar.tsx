@@ -171,7 +171,7 @@ export default function Navbar() {
                 />
               </Link>
               <button
-                className="bg-red-500 py-1 px-3 rounded text-white flex-y-center gap-2"
+                className="bg-red-500 h-[43px] px-3 rounded text-white flex-y-center gap-2"
                 onClick={handleOpenCatalog}
               >
                 <span>Katalog</span>
@@ -181,9 +181,9 @@ export default function Navbar() {
                 <input
                   type="search"
                   placeholder="Mahsulot qidirish"
-                  className="outline-none h-8 px-4 w-full py-2 border-2 rounded-l border-r-0 focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
+                  className="outline-none h-[43px] px-4 w-full py-2 border-2 rounded-l border-r-0 focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
                 />
-                <button className="w-20 h-8 bg-[#f7f7f7] flex-center bg-opacity-20 border-2 border-red-500 rounded-r">
+                <button className="w-20 h-[43px] bg-[#f7f7f7] flex-center bg-opacity-20 border-2 border-red-500 rounded-r">
                   <SearchIcon />
                 </button>
               </div>

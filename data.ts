@@ -1,7 +1,7 @@
 export const productsdata = [
   {
     id: 1,
-    name: "Smartfon Tecno Spark Go 2023",
+    name: "Smartfon Tecno Spark Go 2023 Tecno Spark Go 2023 Tecno Spark Go 2023 ",
     price: "1 209 000",
     img: "https://images.uzum.uz/clnc6odenntcj8aaba60/original.jpg",
     img2: "https://images.uzum.uz/clk49h5enntcj8a9jmq0/original.jpg",

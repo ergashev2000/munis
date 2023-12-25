@@ -23,9 +23,9 @@ const Page = () => {
       <Category />
       <NewProducts />
       <CategoryProducts />
-      <News />
       <Branchs/>
       <Services />
+      <News />
       <Recommended />
     </main>
   );
