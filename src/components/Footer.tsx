@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 import {
@@ -134,9 +134,7 @@ const index = () => {
         </div>
         <hr className="bg-gray-300 w-full mb-5 mt-12" />
         <p className="text-gray-300 text-sm">
-          2019-2023 © Munissavdo.uz. Barcha huquqlar himoyalangan. Tovarlarning
-          ko&apos;rsatilgan qiymati va ularni sotib olish shartlari joriy sanaga
-          amal qiladi
+          2019-2023 © Munissavdo.uz - Barcha huquqlar himoyalangan.
         </p>
       </div>
     </footer>

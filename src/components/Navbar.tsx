@@ -83,12 +83,12 @@ export default function Navbar() {
                 onClick={handleOpenModal}
               >
                 <Image
-                  src={lang === "/uz" ? UzFlagIcon : RuFlagIcon}
+                  src={lang === "uz" ? UzFlagIcon : RuFlagIcon}
                   alt="Flag Icon"
                   width={18}
                   height={18}
                 />
-                {lang === "/uz" ? "O'zbekcha" : "Русский"}
+                {lang === "uz" ? "O'zbekcha" : "Русский"}
               </button>
 
               <div
