@@ -1,17 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
 import { CartIcon, HeartIcon } from "@/assests/icons/svgicons";
-import { useParams } from "next/navigation";
 
 const MainCard = ({ item }: { item: any }) => {
-  const { locale } = useParams();
 
   return (
     <div className="p-2 rounded-xl bg-white max-w-[300px] relative hover:shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
-      <Link href={`${locale}/product/${item?.id}`}>
+      <Link href={`/product/${item?.id}`}>
         <div className="relative w-full max-w-[360px] group overflow-hidden h-64 rounded-lg">
           <Image
             width={300}
@@ -36,7 +32,7 @@ const MainCard = ({ item }: { item: any }) => {
       </button>
       <div className="space-y-1.5">
         <h4 className="font-semibold pt-2 text-red-500">{item?.price} so`m</h4>
-        <Link href={`${locale}/product/${item?.id}`}>
+        <Link href={`/product/${item?.id}`}>
           <h3 className="text-[16px] font-semibold line-clamp-1 hover:bg-white  hover:text-red-500 transition-all duration-300">
             Smartfon Oppo A17 4/64GB Blue Oppo A17 4/64GB Blue
           </h3>
