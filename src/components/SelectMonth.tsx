@@ -58,7 +58,7 @@ export default function Index() {
           <h4>Oylik to&apos;lov:</h4> <span>{monthCalc} so&apos;m</span>
         </div>
         <div className="text-sm text-gray-700 flex justify-between items-center gap-2 whitespace-nowrap">
-          <h4>Umumiy summa:</h4> <span>{totalCalc} so&apos;m</span>
+          <h4>Umumiy summa:</h4> <span className="text-base text-red-500 font-semibold">{totalCalc} so&apos;m</span>
         </div>
       </div>
       <Button classname="text-white text-sm py-3" outline>

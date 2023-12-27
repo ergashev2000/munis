@@ -195,7 +195,7 @@ export default function Navbar() {
                   <span>Kirish</span>
                 </button>
               </Link>
-              <Link href={"/"}>
+              <Link href={"/cabinet/favorites"}>
                 <button className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col">
                   <HeartIcon />
                   <span>Saralangan</span>

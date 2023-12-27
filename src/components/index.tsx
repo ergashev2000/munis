@@ -17,6 +17,7 @@ import TabAboutProduct from "./TabAboutProduct";
 import LoginModal from "./LoginModal";
 import Orders from "./Orders";
 import Settings from "./Settings";
+import CartProductCard from "./CartProductCard";
 
 export {
   Navbar,
@@ -37,4 +38,5 @@ export {
   LoginModal,
   Orders,
   Settings,
+  CartProductCard,
 };
