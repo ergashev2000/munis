@@ -201,7 +201,7 @@ export default function Navbar() {
                   <span>Saralangan</span>
                 </button>
               </Link>
-              <Link href={"/"}>
+              <Link href={"/cabinet/cart"}>
                 <button className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col">
                   <CartIcon />
                   <span>Savatcha</span>
