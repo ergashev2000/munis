@@ -53,7 +53,6 @@ const Index = () => {
   return (
     <section className="py-10">
       <h3 className="text-lg font-semibold">Ommabop kategoriyalar</h3>
-
       <CustomSwiper slidesNumber={5} between={10}>
         {categoryPath.map(item => (
           <Link key={item.id} href={`${locale}/category/smartfon`}>

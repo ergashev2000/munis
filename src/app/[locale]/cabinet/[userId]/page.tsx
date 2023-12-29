@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { useParams } from "next/navigation";
 import { Orders, Settings } from "@/components";
-import { OrderCartIcon, SettingsIcon, SignOutIcon, UserIcon } from "@/assests/icons/svgicons";
+import { OrderCartIcon, SettingsIcon, SignOutIcon } from "@/assests/icons/svgicons";
 
 export default function Page() {
   const { userId } = useParams();
@@ -22,7 +22,7 @@ export default function Page() {
                   userId === "orders" ? "bg-gray-200" : ""
                 }`}
               >
-                <OrderCartIcon /> Buyurtmalarim
+                <OrderCartIcon /> <span>Buyurtmalarim</span>
               </p>
             </Link>
           </li>
@@ -39,9 +39,7 @@ export default function Page() {
           </li>
           <li className="w-48">
             <button>
-              <p
-                className='py-2 px-4 rounded-lg gap-2 flex items-center'
-              >
+              <p className="py-2 px-4 rounded-lg gap-2 flex items-center">
                 <SignOutIcon /> Chiqish
               </p>
             </button>

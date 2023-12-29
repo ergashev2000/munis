@@ -42,7 +42,7 @@ export default function CartProductCard({
             <Tooltip
               content={
                 <div className="text-[15px] py-1 px-2 bg-black text-white rounded-lg">
-                  Mahsulotni o`chirish
+                  Mahsulotni o&apos;chirish
                 </div>
               }
             >
@@ -59,7 +59,7 @@ export default function CartProductCard({
                   </div>
                 }
               >
-                <button className="hover:bg-gray-100 rounded-full w-10 h-10 flex-center transition-all duration-300 [&>svg]:w-6 [&>svg]:h-6">
+                <button className="hover:bg-gray-100 rounded-full p-1 flex-center transition-all duration-300 [&>svg]:w-6 [&>svg]:h-6">
                   <HeartIcon />
                 </button>
               </Tooltip>

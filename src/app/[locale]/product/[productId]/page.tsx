@@ -73,7 +73,7 @@ export default async function Page() {
           <div className="bg-white p-4 rounded-lg h-max space-y-2">
             <h4 className="text-lg font-semibold">Mahsulot narxi</h4>
             <p className="text-2xl text-red-500 font-semibold">
-              1 425 000 so`m
+              1 425 000 so&apos;m
             </p>
             <Button outline={false} classname="">
               Savatchaga qo`shish
@@ -84,7 +84,7 @@ export default async function Page() {
           </div>
 
           <div className="bg-white rounded-lg h-max p-4 font-semibold text-lg">
-            <h4>Muddatli to`lovga</h4>
+            <h4>Muddatli to&apos;lovga</h4>
             <SelectMonth />
           </div>
         </div>

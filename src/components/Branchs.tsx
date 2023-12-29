@@ -1,13 +1,14 @@
 "use client";
 
-import { ArrowRightIcon, MapIcon } from "@/assests/icons/svgicons";
+import React, { useRef } from "react";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+
 import BranchsMap from "./ui/BranchsMap";
 
-export default function Branchs() {
+import { ArrowRightIcon, MapIcon } from "@/assests/icons/svgicons";
+
+export default function Branchs({className}: {className?:string}) {
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const [fillColor, setFillColor] = useState("#7c7c7c");
 
   const handleMouseOver = (id: string) => {
     const pathElement = document.getElementById(id);
@@ -46,7 +47,7 @@ export default function Branchs() {
 
   return (
     <section>
-      <div className="flex items-center gap-10">
+      <div className={`flex items-center gap-10 ${className}`}>
         <div className="map w-1/2">
           <span
             className="fergana"

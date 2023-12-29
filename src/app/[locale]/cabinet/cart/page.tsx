@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/assests/icons/svgicons";
 import {
@@ -11,7 +10,7 @@ import {
 export default function Page() {
   return (
     <>
-      <div className="gap-5 min-h-[500px]">
+      <div className="gap-5 min-h-[200px]">
         <div className="py-8 flex-y-center space-x-3 text-[16px]">
           <Link href={"/"}>
             <div className="flex-y-center gap-3 rounded stroke-black">
@@ -27,10 +26,8 @@ export default function Page() {
         </div>
         <div className="flex gap-5">
           <div className="w-3/4">
-            <div>
-              <div className="space-y-2">
-                <CartProductCard isCart />
-              </div>
+            <div className="space-y-2">
+              <CartProductCard isCart />
             </div>
           </div>
 

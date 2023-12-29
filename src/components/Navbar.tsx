@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 import Catalog from "./Catalog";
+import { branchsdata } from "@/utils/constants/branchs";
 import { PhoneNumber } from "@/utils/constants/contact";
 
 import RuFlagIcon from "@/assests/icons/russia.svg";
@@ -33,18 +34,30 @@ const categoryPath = [
 ];
 
 export default function Navbar() {
-  const { locale: locale } = useParams();
-  const [isChecked, setIsChecked] = useState(false);
-  const [isOpenCatalog, setIsOpenCatalog] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const params = useParams();
+  const [lang, setLang] = useState(params?.locale);
 
-  const [lang, setLang] = useState(locale);
+  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const [isOpenCatalog, setIsOpenCatalog] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isOpenBranch, setIsOpenBranch] = useState<boolean>(false);
+  const [selectedBranch, setSelectedBranch] = useState<string>("Farg'ona");
 
   const handleOpenModal = () => setIsChecked(prev => !prev);
-
   const handleCheckLang = (e: any) => setLang(e.target.value);
-
   const handleOpenCatalog = () => setIsOpenCatalog(prev => !prev);
+  const handleOpenBranchs = () => setIsOpenBranch(prev => !prev);
+  const handleSelectBranch = (name: string) => {
+    setSelectedBranch(name);
+    setIsOpenBranch(false);
+  };
+
+  useEffect(() => {
+    setIsOpenBranch(false)
+    setIsOpenCatalog(false);
+    setIsChecked(false);
+  }, [params]);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,12 +74,34 @@ export default function Navbar() {
       <header className="relative">
         <div className="bg-black text-[#f7f7f7]">
           <div className="container mx-auto flex-between h-[36px] w-full">
-            <div className="flex-y-center gap-5">
-              <button className="flex-y-center gap-1.5">
+            <div className="flex-y-center gap-5 relative">
+              <button
+                className="flex-y-center gap-1.5 w-28"
+                onClick={handleOpenBranchs}
+              >
                 <LocationIcon />
-                <span className="text-[14px]">Farg&apos;ona</span>
+                <span className="text-[14px]">{selectedBranch}</span>
               </button>
-              <span className="text-[14px]">Bizning do`konlarimiz</span>
+              {isOpenBranch && (
+                <ul className="absolute top-full mt-2 shadow-md left-0 bg-white text-black z-10 rounded">
+                  {branchsdata.map((item: any) => (
+                    <li
+                      key={item.id}
+                      onClick={() => handleSelectBranch(item.branch)}
+                      className="text-[15px] cursor-pointer hover:bg-gray-100 py-1.5 px-5 flex items-center [&>svg]:w-3 [&>svg]:h-3 [&>svg]:absolute [&>svg]:left-1 [&>svg]:top-1/2 [&>svg]:-translate-y-1/2 relative"
+                    >
+                      {item.branch === selectedBranch && <LocationIcon />}
+                      <span>{item.branch}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <Link href={"/"}>
+                <span className="text-[14px] link-effect before:bottom-0">
+                  Bizning do&apos;konlarimiz
+                </span>
+              </Link>
             </div>
             <div className="flex-center gap-5 relative">
               <div className="text-[14px] flex-center gap-1">

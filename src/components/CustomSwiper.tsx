@@ -19,6 +19,7 @@ type SwiperProps = {
   effect?: string;
   autoplay?: number;
   pagination?: boolean;
+  className?: string
 };
 
 const CustomSwiper = ({

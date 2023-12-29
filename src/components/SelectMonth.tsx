@@ -61,7 +61,7 @@ export default function Index() {
           <h4>Umumiy summa:</h4> <span className="text-base text-red-500 font-semibold">{totalCalc} so&apos;m</span>
         </div>
       </div>
-      <Button classname="text-white text-sm py-3" outline>
+      <Button classname="text-white text-sm" outline>
         Bo&apos;lib to&apos;lash
       </Button>
     </div>
