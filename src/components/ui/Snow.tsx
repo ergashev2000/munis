@@ -18,8 +18,8 @@ export default function Snow() {
 
 function drawSnowflake(snowflake: Snowflake): void {
   const ctx = ctxRef.current;
-  if (!ctx) return; // Skip drawing if context is not available
-
+  if (!ctx) return;
+  
   ctx.beginPath();
   ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI * 2);
   ctx.fillStyle = `rgba(255, 255, 255, ${snowflake.opacity})`!;
@@ -54,7 +54,6 @@ function drawSnowflake(snowflake: Snowflake): void {
     for (let i = 0; i < 100; i++) {
       snowflakes.push(createSnowflake());
     }
-
     draw();
   }
 
@@ -63,18 +62,15 @@ function drawSnowflake(snowflake: Snowflake): void {
     if (!canvas) {
       throw new Error("Canvas element with ID 'snowCanvas' not found");
     }
-
     const ctx = canvas.getContext("2d");
     if (!ctx) {
       throw new Error("2D context not supported");
     }
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     canvasRef.current = canvas;
     ctxRef.current = ctx;
-
     init();
   }, []);
 
@@ -87,5 +83,4 @@ interface Snowflake {
   radius: number;
   speed: number;
   opacity: number;
-  
 }

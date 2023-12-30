@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/assests/styles/global.scss";
-
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { notFound } from "next/navigation";
 
-import { Footer, Navbar, LoginModal } from "@/components";
+import { Footer, Navbar, LoginModal, RegisterModal } from "@/components";
 import Snow from "@/components/ui/Snow";
+import Providers from "@/utils/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,18 +27,16 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
 
-  const test = false;
-
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        {test && <LoginModal />}
-        <Snow />
-
-        <Navbar />
-        <main className="container mx-auto">{children}</main>
-        <SpeedInsights />
-        <Footer />
+        <Providers>
+          <Snow />
+          <Navbar />
+          <main className="container mx-auto">{children}</main>
+          <Footer />
+          <SpeedInsights/>
+        </Providers>
       </body>
     </html>
   );

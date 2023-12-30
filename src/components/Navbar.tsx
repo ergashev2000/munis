@@ -97,7 +97,7 @@ export default function Navbar() {
                 </ul>
               )}
 
-              <Link href={"/"}>
+              <Link href={"/branches"}>
                 <span className="text-[14px] link-effect before:bottom-0">
                   Bizning do&apos;konlarimiz
                 </span>

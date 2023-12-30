@@ -11,13 +11,19 @@ import Footer from "./Footer";
 
 import FilterBar from "./FilterBar";
 import ProductSwiper from "./ProductSwiper";
-import Button from "./ui/Button";
 import SelectMonth from "./SelectMonth";
 import TabAboutProduct from "./TabAboutProduct";
-import LoginModal from "./LoginModal";
 import Orders from "./Orders";
 import Settings from "./Settings";
 import CartProductCard from "./CartProductCard";
+import CustomPaths from "./CustomPaths";
+import ProductsRender from "./ProductsRender";
+import LoginModal from "./LoginModal";
+import RegisterModal from "./RegisterModal";
+
+import Button from "./ui/Button";
+import FilterProducts from "./ui/FilterProducts";
+import Snow from './ui/Snow'
 
 export {
   Navbar,
@@ -32,11 +38,17 @@ export {
   Footer,
   FilterBar,
   ProductSwiper,
-  Button,
   SelectMonth,
   TabAboutProduct,
   LoginModal,
   Orders,
   Settings,
   CartProductCard,
+  CustomPaths,
+  ProductsRender,
+  RegisterModal,
+  
+  FilterProducts,
+  Button,
+  Snow,
 };

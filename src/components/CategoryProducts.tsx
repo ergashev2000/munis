@@ -10,7 +10,7 @@ const index = () => {
   return (
     <section>
       <div className="pb-6">
-        <Link href={"/"}>
+        <Link href={"/smartfons"}>
           <div className="flex-y-center group w-max">
             <h3 className="text-lg font-semibold transition-all duration-300 group-hover:text-red-500">
               Telefonlar

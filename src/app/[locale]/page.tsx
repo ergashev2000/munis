@@ -11,7 +11,7 @@ import {
   Recommended,
   Services,
 } from "@/components";
-import Branchs from "@/components/Branchs";
+import Branchs from "@/components/Branches";
 
 const Page = () => {
   const t = useTranslations("Index");
@@ -23,7 +23,7 @@ const Page = () => {
       <Category />
       <NewProducts />
       <CategoryProducts />
-      <Branchs/>
+      <Branchs />
       <Services />
       <News />
       <Recommended />

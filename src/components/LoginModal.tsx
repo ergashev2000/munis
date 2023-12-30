@@ -16,11 +16,9 @@ export default function LoginModal() {
     <>
       <div className="left-0 right-0 w-full h-screen bg-black absolute z-20 bg-opacity-50">
         <div className="absolute left-1/2 -translate-x-1/2 bg-white top-1/2 -translate-y-1/2 p-8 pt-4 rounded-lg max-w-sm w-full">
-          <div className="flex justify-end">
-            <button className="w-8 h-8 rounded-full active:bg-gray-200 hover:bg-gray-100 flex-center">
-              <CloseIcon />
-            </button>
-          </div>
+          <button className="w-8 h-8 rounded-full active:bg-gray-200 hover:bg-gray-100 flex-center absolute right-5 top-5">
+            <CloseIcon />
+          </button>
           <h1 className="font-semibold text-2xl text-center pb-5">Kirish</h1>
           <div className="space-y-5">
             <div className="relative">
@@ -36,7 +34,7 @@ export default function LoginModal() {
 
               <label
                 htmlFor="phoneId"
-                className="text-[16px] absolute bg-white left-2 -top-2 transition-all duration-200 cursor-text"
+                className="text-[16px] absolute bg-white left-2 -top-3 transition-all duration-200 cursor-text"
               >
                 Telefon raqami <span className="text-red-500">*</span>
               </label>
@@ -53,7 +51,7 @@ export default function LoginModal() {
 
               <label
                 htmlFor="passwordId"
-                className="text-[16px] absolute bg-white left-2 peer-focus:top-0 top-1/2 -translate-y-1/2 transition-all duration-200 cursor-text"
+                className="text-[16px] bg-white absolute py-0 left-2  peer-focus:top-0 top-1/2 -translate-y-1/2 transition-all duration-200 cursor-text"
               >
                 Parol
               </label>

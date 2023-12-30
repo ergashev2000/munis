@@ -1,10 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import axios from "axios";
 
-import { Button } from "@/components/index";
-
-import { ArrowRightIcon } from "@/assests/icons/svgicons";
+import { Button, CustomPaths } from "@/components/index";
 
 import {
   NewProducts,
@@ -22,18 +19,11 @@ export default async function Page() {
   //     .get("http://localhost:5000/api/users")
   //     .then(response => response.data),
   // ]);
+  
 
   return (
     <div className="container mx-auto min-h-screen pb-4">
-      <div className="pb-7 pt-5 [&>svg]:stroke-black text-sm flex-y-center gap-2 text-gray-400 [&>*:last-child]:text-black">
-        <Link href={"/"}>
-          <h4>Bosh sahifa</h4>
-        </Link>
-        <ArrowRightIcon />
-        <Link href={"/"}>
-          <h4>Kir moshina</h4>
-        </Link>
-      </div>
+      <CustomPaths/>
 
       <div className="flex gap-4">
         <div className="bg-white p-8 rounded-lg w-3/4 h-full">

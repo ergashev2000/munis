@@ -7,7 +7,7 @@ import BranchsMap from "./ui/BranchsMap";
 
 import { ArrowRightIcon, MapIcon } from "@/assests/icons/svgicons";
 
-export default function Branchs({className}: {className?:string}) {
+export default function Branches({ className }: { className?: string }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   const handleMouseOver = (id: string) => {
