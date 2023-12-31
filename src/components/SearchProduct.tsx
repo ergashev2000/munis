@@ -13,6 +13,8 @@ export default function SearchProduct() {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchValue(e.target.value);
 
+  const handleSuggestionClick = (text: string) => setSearchValue(text);
+
   return (
     <div className="relative max-w-xl w-full">
       <div className="w-full flex items-center">
@@ -23,7 +25,12 @@ export default function SearchProduct() {
           onChange={handleSearch}
           value={searchValue}
           onFocus={() => setIsOpenProduct(true)}
-          onBlur={() => setIsOpenProduct(false)}
+          onBlur={() => setTimeout(() => setIsOpenProduct(false), 500)}
+          onKeyDown={e => {
+            if (e.key === "Enter") {
+              setSearchValue("");
+            }
+          }}
         />
         <button className="w-20 h-[43px] bg-[#f7f7f7] flex items-center justify-center bg-opacity-20 border-2 border-red-500 rounded-r">
           <SearchIcon />
@@ -33,8 +40,8 @@ export default function SearchProduct() {
         <div className="h-auto max-w-md w-full rounded-lg p-2 bg-white shadow-xl top-10 z-20 absolute">
           <ul className="space-y-1">
             {!!searchValue && (
-              <li>
-                <Link href={"/"}>
+              <li onClick={() => setSearchValue("")}>
+                <Link href={"/product/1"}>
                   <div className="flex items-center gap-2 bg-gray-100 rounded border border-transparent hover:border-gray-300 transition-all duration-300">
                     <Image
                       src={Img}
@@ -54,16 +61,12 @@ export default function SearchProduct() {
               </li>
             )}
           </ul>
+
           {!searchValue && (
             <ul className="space-y-1">
-              <li>
-                <h5 className="font-semibold px-2">
-                  Eng ko&apos;p qidirilganlar
-                </h5>
-              </li>
               <li
-                className="text-sm my-0.5 px-2 hover:bg-gray-100 transition-all duration-300 w-full cursor-pointer"
-                onClick={() => setSearchValue("Lorem, ipsum dolor0")}
+                className="text-[15px] my-0.5 px-2 hover:bg-gray-100 transition-all duration-300 w-full cursor-pointer"
+                onClick={() => handleSuggestionClick("Lorem, ipsum dolor0")}
               >
                 Lorem, ipsum dolor0
               </li>

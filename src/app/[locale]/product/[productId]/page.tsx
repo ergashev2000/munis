@@ -24,13 +24,13 @@ export default function Page() {
             <div className="w-1/2 space-y-2">
               <h4 className="font-semibold">Mahsulot haqida qisqacha</h4>
               <p className="text-sm font-semibold">
-                Brend: <span className="text-red-500"></span>
+                Brend: <span className="text-red-500">LG</span>
               </p>
               <ul className="space-y-2 whitespace-nowrap">
                 <li className="text-[15px] flex-center w-full">
                   <p>SKU</p>
                   <hr className="w-full mx-2" />
-                  {/* <p>{data.sku}</p> */}
+                  <p>AD2131231</p>
                 </li>
                 <li className="text-[15px] flex-center w-full">
                   <div>Og`irligi, kg</div>
@@ -40,7 +40,7 @@ export default function Page() {
                 <li className="text-[15px] flex-center w-full">
                   <div>Kir yuvish mashinasining turi</div>
                   <hr className="w-full mx-2" />
-                  <div>avtomatik</div>
+                  <div>avtomat</div>
                 </li>
               </ul>
             </div>
@@ -52,10 +52,10 @@ export default function Page() {
             <p className="text-2xl text-red-500 font-semibold">
               1 425 000 so&apos;m
             </p>
-            <Button outline={false} classname="">
+            <Button outline={false} classname="text-sm">
               Savatchaga qo`shish
             </Button>
-            <Button outline classname="text-white">
+            <Button outline classname="text-white text-sm">
               Sotib olish
             </Button>
           </div>
@@ -66,9 +66,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-
       <TabAboutProduct />
-
       <NewProducts />
     </div>
   );
