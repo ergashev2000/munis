@@ -70,10 +70,10 @@ const index = () => {
 
           <ul className="text-[15px] space-y-3 w-1/4">
             <li>
-              <h4 className="text-lg font-semibold">Munis</h4>
+              <h4 className="text-lg font-semibold">Munis.uz</h4>
             </li>
             <li>
-              <Link href={"/"}>
+              <Link href={"/branches"}>
                 <span className="link-effect">Biz haqimizda</span>
               </Link>
             </li>

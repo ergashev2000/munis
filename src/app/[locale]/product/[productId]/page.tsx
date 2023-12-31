@@ -1,6 +1,3 @@
-import React from "react";
-import axios from "axios";
-
 import { Button, CustomPaths } from "@/components/index";
 
 import {
@@ -10,17 +7,7 @@ import {
   TabAboutProduct,
 } from "@/components";
 
-export default async function Page() {
-  // const [productsData, newProductsData] = await Promise.all([
-  //   axios
-  //     .get("http://localhost:5000/api/products")
-  //     .then(response => response.data),
-  //   axios
-  //     .get("http://localhost:5000/api/users")
-  //     .then(response => response.data),
-  // ]);
-  
-
+export default function Page() {
   return (
     <div className="container mx-auto min-h-screen pb-4">
       <CustomPaths/>
@@ -28,7 +15,7 @@ export default async function Page() {
       <div className="flex gap-4">
         <div className="bg-white p-8 rounded-lg w-3/4 h-full">
           <h4 className="pb-4 pt-2 px-1.5 text-xl font-semibold">
-            {/* {data} */}
+           Lorem ipsum dolor sit amet.
           </h4>
           <div className="flex gap-8">
             <div className="w-1/2">

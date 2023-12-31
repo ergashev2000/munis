@@ -116,7 +116,7 @@ export default function Settings() {
             />
           </div>
           <Button outline classname="text-sm text-white w-max px-8">
-            O`zgarishlarni saqlash
+            O&apos;zgarishlarni saqlash
           </Button>
         </div>
       </div>
@@ -146,7 +146,7 @@ export default function Settings() {
           />
         </div>
         <Button outline classname="text-sm text-white w-max px-8">
-          O`zgarishlarni saqlash
+          O&apos;zgarishlarni saqlash
         </Button>
       </div>
     </div>

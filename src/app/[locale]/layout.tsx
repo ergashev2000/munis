@@ -33,7 +33,7 @@ export default function RootLayout({
         <Providers>
           <Snow />
           <Navbar />
-          <main className="container mx-auto">{children}</main>
+          <main className="container mx-auto min-h-screen">{children}</main>
           <Footer />
           <SpeedInsights/>
         </Providers>

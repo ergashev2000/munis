@@ -3,8 +3,6 @@ interface UserData {
   password: string;
 }
 
-
-
 export type {
   UserData
 }

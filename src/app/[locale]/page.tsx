@@ -17,7 +17,7 @@ const Page = () => {
   const t = useTranslations("Index");
 
   return (
-    <main className="min-h-screen">
+    <>
       <Hero />
       <Brands />
       <Category />
@@ -27,7 +27,7 @@ const Page = () => {
       <Services />
       <News />
       <Recommended />
-    </main>
+    </>
   );
 };
 

@@ -22,16 +22,8 @@ import {
   SearchIcon,
   UserIcon,
 } from "@/assests/icons/svgicons";
-
-const categoryPath = [
-  { id: 1, category: `AKSIYALAR` },
-  { id: 2, category: "XAVO SOVUTGICHLAR" },
-  { id: 3, category: "SMARTFONLAR" },
-  { id: 4, category: "MUZLATGICHLAR" },
-  { id: 5, category: "CHANGYUTGICHLAR" },
-  { id: 6, category: "NOUTBUKLAR" },
-  { id: 7, category: "TELEVIZORLAR" },
-];
+import NavLinks from "./NavLinks";
+import SearchProduct from "./SearchProduct";
 
 export default function Navbar() {
   const params = useParams();
@@ -43,7 +35,7 @@ export default function Navbar() {
   const [isOpenBranch, setIsOpenBranch] = useState<boolean>(false);
   const [selectedBranch, setSelectedBranch] = useState<string>("Farg'ona");
 
-  const handleOpenModal = () => setIsChecked(prev => !prev);
+  const handleOpenModal = (isOpenLang: any) => setIsChecked(isOpenLang);
   const handleCheckLang = (e: any) => setLang(e.target.value);
   const handleOpenCatalog = () => setIsOpenCatalog(prev => !prev);
   const handleOpenBranchs = () => setIsOpenBranch(prev => !prev);
@@ -53,11 +45,10 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    setIsOpenBranch(false)
+    setIsOpenBranch(false);
     setIsOpenCatalog(false);
     setIsChecked(false);
   }, [params]);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,7 +98,7 @@ export default function Navbar() {
               <div className="text-[14px] flex-center gap-1">
                 Aloqa markazi :
                 <Link href={`tel:${PhoneNumber.original_number}`}>
-                  <h5 className="text-[15px] font-semibold">
+                  <h5 className="text-[15px] font-semibold hover:text-red-500 transition-all duration-300">
                     {PhoneNumber.public_number}
                   </h5>
                 </Link>
@@ -115,7 +106,7 @@ export default function Navbar() {
 
               <button
                 className="flex-center text-[14px] gap-1 w-24"
-                onClick={handleOpenModal}
+                onMouseEnter={() => handleOpenModal(true)}
               >
                 <Image
                   src={lang === "uz" ? UzFlagIcon : RuFlagIcon}
@@ -212,16 +203,7 @@ export default function Navbar() {
                 <span>Katalog</span>
                 {isOpenCatalog ? <CloseIcon /> : <MenuIcon />}
               </button>
-              <div className="max-w-xl w-full flex-y-center">
-                <input
-                  type="search"
-                  placeholder="Mahsulot qidirish"
-                  className="outline-none h-[43px] px-4 w-full py-2 border-2 rounded-l border-r-0 focus:border-red-500 [&:focus+button>svg]:stroke-white [&:focus+button]:bg-red-500"
-                />
-                <button className="w-20 h-[43px] bg-[#f7f7f7] flex-center bg-opacity-20 border-2 border-red-500 rounded-r">
-                  <SearchIcon />
-                </button>
-              </div>
+              <SearchProduct />
             </div>
             <div className="flex justify-end items-center w-1/4 gap-4 text-[12px] font-semibold">
               <Link href={`/cabinet/orders`}>
@@ -247,20 +229,7 @@ export default function Navbar() {
         </div>
         <div className={`h-16 bg-white ${scrolled ? "block" : "hidden"}`}></div>
         <div className="bg-white w-full pt-1">
-          <nav className="container mx-auto">
-            <ul
-              className={`flex-y-center gap-10 pb-3 mb-2 [&>li]:text-[15px] font-semibold `}
-            >
-              {categoryPath.map(category => (
-                <li
-                  key={category.id}
-                  className="before:w-full before:h-0.5 before:-bottom-1.5 before:bg-black before:absolute relative before:scale-x-0 before:transition-all before:duration-300 hover:before:scale-x-100 before:origin-left"
-                >
-                  <Link href={"/"}>{category.category}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <NavLinks />
         </div>
       </header>
     </>

@@ -2,25 +2,27 @@
 import { useEffect } from "react";
 import MainCard from "./MainCard";
 import { productsdata } from "../../data";
+import { getProducts } from "@/utils/api/productsApi";
+import { useQuery } from "@tanstack/react-query";
 
 export default function ProductsRender() {
-//   const fetchData = async () => {
-//     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-//     const data = await response.json();
-//     return data;
-//   };
+  const { data, isLoading, isFetching, isError } = useQuery({
+    queryKey: ["initial-users"],
+    queryFn: () => getProducts(),
+  });
 
-//   useEffect(() => {
-//     fetchData();
-  //   }, []);
-  
-  
+  if (isLoading) {
+    return "Loading"
+  }
 
   return (
     <div className="grid grid-cols-4 gap-3">
-      {productsdata?.map((item: any) => (
-        <MainCard key={item.id} item={item} />
+      {data?.map((item: any) => (
+        <li key={item.id}>{item.name}</li>
       ))}
+      {/* {productsdata?.map((item: any) => (
+        <MainCard key={item.id} item={item} />
+      ))} */}
     </div>
   );
 }
