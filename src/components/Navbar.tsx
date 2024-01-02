@@ -6,6 +6,9 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 import Catalog from "./Catalog";
+import NavLinks from "./NavLinks";
+import SearchProduct from "./SearchProduct";
+
 import { branchsdata } from "@/utils/constants/branchs";
 import { PhoneNumber } from "@/utils/constants/contact";
 
@@ -19,11 +22,8 @@ import {
   HeartIcon,
   LocationIcon,
   MenuIcon,
-  SearchIcon,
   UserIcon,
 } from "@/assests/icons/svgicons";
-import NavLinks from "./NavLinks";
-import SearchProduct from "./SearchProduct";
 
 export default function Navbar() {
   const params = useParams();

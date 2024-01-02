@@ -46,7 +46,9 @@ export default function Index() {
             key={item}
             onClick={() => handleSelect(item)}
             className={`h-10 w-16 rounded-lg border-2 flex-center border-gray-300 hover:font-semibold  cursor-pointer ${
-              select === item ? "border-red-500 font-semibold bg-red-500 text-white" : ""
+              select === item
+                ? "border-red-500 font-semibold bg-red-500 text-white"
+                : ""
             }`}
           >
             {item} oy
@@ -58,10 +60,13 @@ export default function Index() {
           <h4>Oylik to&apos;lov:</h4> <span>{monthCalc} so&apos;m</span>
         </div>
         <div className="text-sm text-gray-700 flex justify-between items-center gap-2 whitespace-nowrap">
-          <h4>Umumiy summa:</h4> <span className="text-base text-red-500 font-semibold">{totalCalc} so&apos;m</span>
+          <h4>Umumiy summa:</h4>{" "}
+          <span className="text-base text-red-500 font-semibold">
+            {totalCalc} so&apos;m
+          </span>
         </div>
       </div>
-      <Button classname="text-white text-sm" outline>
+      <Button className="text-white text-sm" outline>
         Bo&apos;lib to&apos;lash
       </Button>
     </div>

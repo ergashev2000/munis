@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <div className="gap-5 min-h-[200px]">
         <div>
-        <CustomPaths/>
+          <CustomPaths />
         </div>
         <div className="flex gap-5">
           <div className="w-3/4">
@@ -49,7 +49,7 @@ export default function Page() {
                   4 000 000 so&apos;m
                 </span>
               </div>
-              <Button classname="text-white text-sm" outline>
+              <Button className="text-white text-sm" outline>
                 Rasmiylashtirish
               </Button>
             </div>

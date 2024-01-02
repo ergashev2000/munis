@@ -8,6 +8,7 @@ import Brands from "./Brands";
 import Services from "./Services";
 import Recommended from "./Recommended";
 import Footer from "./Footer";
+import Branches from "./Branches";
 
 import FilterBar from "./FilterBar";
 import ProductSwiper from "./ProductSwiper";
@@ -20,6 +21,8 @@ import CustomPaths from "./CustomPaths";
 import ProductsRender from "./ProductsRender";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
+import ShoppingModal from "./ShoppingModal";
+import BuyProductBar from "./BuyProductBar";
 
 import Button from "./ui/Button";
 import FilterProducts from "./ui/FilterProducts";
@@ -47,6 +50,9 @@ export {
   CustomPaths,
   ProductsRender,
   RegisterModal,
+  ShoppingModal,
+  Branches,
+  BuyProductBar,
   
   FilterProducts,
   Button,

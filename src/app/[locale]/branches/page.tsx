@@ -61,7 +61,7 @@ export default function Page() {
             </div>
             <div className="w-1/2">
               <h4 className="text-2xl text-center font-semibold pb-2">
-                Farg&apos;ona viloyati
+                Samarqand viloyati
               </h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.

@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { notFound } from "next/navigation";
 
-import { Footer, Navbar, LoginModal, RegisterModal } from "@/components";
+import { Footer, Navbar } from "@/components";
 import Snow from "@/components/ui/Snow";
 import Providers from "@/utils/Providers";
 
@@ -35,7 +35,7 @@ export default function RootLayout({
           <Navbar />
           <main className="container mx-auto min-h-screen">{children}</main>
           <Footer />
-          <SpeedInsights/>
+          <SpeedInsights />
         </Providers>
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { Button, CustomPaths } from "@/components/index";
+import { Button, BuyProductBar, CustomPaths } from "@/components/index";
 
 import {
   NewProducts,
@@ -10,12 +10,12 @@ import {
 export default function Page() {
   return (
     <div className="container mx-auto min-h-screen pb-4">
-      <CustomPaths/>
+      <CustomPaths />
 
       <div className="flex gap-4">
         <div className="bg-white p-8 rounded-lg w-3/4 h-full">
           <h4 className="pb-4 pt-2 px-1.5 text-xl font-semibold">
-           Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet.
           </h4>
           <div className="flex gap-8">
             <div className="w-1/2">
@@ -47,23 +47,7 @@ export default function Page() {
           </div>
         </div>
         <div className="w-1/4 space-y-4">
-          <div className="bg-white p-4 rounded-lg h-max space-y-2">
-            <h4 className="text-lg font-semibold">Mahsulot narxi</h4>
-            <p className="text-2xl text-red-500 font-semibold">
-              1 425 000 so&apos;m
-            </p>
-            <Button outline={false} classname="text-sm">
-              Savatchaga qo`shish
-            </Button>
-            <Button outline classname="text-white text-sm">
-              Sotib olish
-            </Button>
-          </div>
-
-          <div className="bg-white rounded-lg h-max p-4 font-semibold text-lg">
-            <h4>Muddatli to&apos;lovga</h4>
-            <SelectMonth />
-          </div>
+          <BuyProductBar/>
         </div>
       </div>
       <TabAboutProduct />

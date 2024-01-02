@@ -115,7 +115,7 @@ export default function Settings() {
               readOnly
             />
           </div>
-          <Button outline classname="text-sm text-white w-max px-8">
+          <Button outline className="text-sm text-white w-max px-8">
             O&apos;zgarishlarni saqlash
           </Button>
         </div>
@@ -145,7 +145,7 @@ export default function Settings() {
             handleInputChange={handleInputChange}
           />
         </div>
-        <Button outline classname="text-sm text-white w-max px-8">
+        <Button outline className="text-sm text-white w-max px-8">
           O&apos;zgarishlarni saqlash
         </Button>
       </div>

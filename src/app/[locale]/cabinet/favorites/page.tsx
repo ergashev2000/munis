@@ -32,11 +32,11 @@ export default function Page() {
               </h5>
               <span className="text-sm font-semibold text-red-500">1</span>
             </div>
-            <Button classname="text-sm mb-2" outline={false}>
+            <Button className="text-sm mb-2" outline={false}>
               Hammasini o&apos;chirish
             </Button>
             <Link href={"/"}>
-              <Button classname="text-white text-sm" outline>
+              <Button className="text-white text-sm" outline>
                 Savatga oʻtish
               </Button>
             </Link>

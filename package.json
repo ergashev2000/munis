@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/tooltip": "^2.0.29",
     "@prisma/client": "^5.7.1",
+    "@reduxjs/toolkit": "^2.0.1",
     "@tanstack/react-query": "^5.15.5",
     "@tanstack/react-query-devtools": "^5.15.5",
     "@tanstack/react-query-next-experimental": "^5.15.5",
@@ -27,6 +28,7 @@
     "react-dom": "^18",
     "react-phone-number-input": "^3.3.7",
     "react-query": "^3.39.3",
+    "react-redux": "^9.0.4",
     "sass": "^1.69.5",
     "swiper": "^11.0.5",
     "uuidv4": "^6.2.13"

@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { openOrderModal } from "../redux/slices/modalsSlices";
 
 import { CartIcon, HeartIcon } from "@/assests/icons/svgicons";
 
 const MainCard = ({ item }: { item: any }) => {
+  const dispatch = useDispatch();
+  
+  const handleOrderOpenModal = () => {
+    dispatch(openOrderModal());
+  };
 
   return (
     <div className="p-2 rounded-xl bg-white max-w-[300px] relative hover:shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
@@ -48,7 +57,10 @@ const MainCard = ({ item }: { item: any }) => {
           </Link>
         </p>
         <div className="flex-y-center gap-2 pt-1">
-          <button className="w-[calc(100%-40px)] border border-gray-200 rounded-lg hover:bg-red-500 hover:text-white text-[15px] transition-all duration-300 text-black font-semibold h-11 px-2 hover:border-red-500">
+          <button
+            className="w-[calc(100%-40px)] border border-gray-200 rounded-lg hover:bg-red-500 hover:text-white text-[15px] transition-all duration-300 text-black font-semibold h-11 px-2 hover:border-red-500"
+            onClick={handleOrderOpenModal}
+          >
             Hozirni o&apos;zidayoq xarid qilish
           </button>
           <button className="min-w-[55px] h-11 border border-red-500   rounded-lg flex-center bg-red-500">
