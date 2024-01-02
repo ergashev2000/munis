@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface OpenModalState {
   isOpenOrderModal: boolean;
+  isOpenLoginModal: boolean;
 }
 
 const initialState: OpenModalState = {
   isOpenOrderModal: false,
+  isOpenLoginModal: false,
 };
 
 const modalSlice = createSlice({
@@ -18,8 +20,19 @@ const modalSlice = createSlice({
     closeOrderModal: state => {
       state.isOpenOrderModal = false;
     },
+    openLoginModal: state => {
+      state.isOpenLoginModal = true;
+    },
+    closeLoginModal: state => {
+      state.isOpenLoginModal = false;
+    },
   },
 });
 
-export const { openOrderModal, closeOrderModal } = modalSlice.actions;
+export const {
+  openOrderModal,
+  closeOrderModal,
+  openLoginModal,
+  closeLoginModal,
+} = modalSlice.actions;
 export default modalSlice.reducer;

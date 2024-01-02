@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { useDispatch } from "react-redux";
 
 import Catalog from "./Catalog";
 import NavLinks from "./NavLinks";
@@ -16,6 +17,8 @@ import RuFlagIcon from "@/assests/icons/russia.svg";
 import UzFlagIcon from "@/assests/icons/uzbekistan.svg";
 import Logo from "@/assests/images/logo.png";
 
+import { openLoginModal } from "@/redux/slices/modalsSlices";
+
 import {
   CartIcon,
   CloseIcon,
@@ -27,6 +30,9 @@ import {
 
 export default function Navbar() {
   const params = useParams();
+  const dispatch = useDispatch();
+  const handleCloseModal = useCallback(() => dispatch(openLoginModal()), []);
+
   const [lang, setLang] = useState(params?.locale);
 
   const [isChecked, setIsChecked] = useState<boolean>(false);
@@ -206,12 +212,15 @@ export default function Navbar() {
               <SearchProduct />
             </div>
             <div className="flex justify-end items-center w-1/4 gap-4 text-[12px] font-semibold">
-              <Link href={`/cabinet/orders`}>
-                <button className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col">
-                  <UserIcon />
-                  <span>Kirish</span>
-                </button>
-              </Link>
+              {/* <Link href={`/cabinet/orders`}> */}
+              <button
+                className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col"
+                onClick={handleCloseModal}
+              >
+                <UserIcon />
+                <span>Kirish</span>
+              </button>
+              {/* </Link> */}
               <Link href={"/cabinet/favorites"}>
                 <button className="hover:bg-[#f7f7f7] py-0.5 w-14 rounded flex-center flex-col">
                   <HeartIcon />

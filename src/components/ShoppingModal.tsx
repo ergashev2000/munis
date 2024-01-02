@@ -12,8 +12,10 @@ import { CloseIcon } from "@/assests/icons/svgicons";
 import useBodyOverflow from "@/hooks/useBodyOverflow";
 
 export default function ShoppingModal() {
-  const isModalOpen = useSelector((state: any) => state.modal.isOpenModal);
   const dispatch = useDispatch();
+  const isOpenOrderModal = useSelector(
+    (state: any) => state.modal.isOpenOrderModal
+  );
 
   const modalRef = useRef(null);
   const [handleToggleButton, setHandleToggleButton] = useState<boolean>(false);
@@ -41,17 +43,17 @@ export default function ShoppingModal() {
   }, [handleCloseModal]);
 
   useEffect(() => {
-    if (isModalOpen) {
+    if (isOpenOrderModal) {
       hiddenScroll();
     } else {
       visibleScroll();
     }
-  }, [isModalOpen]);
+  }, [isOpenOrderModal]);
 
   return (
     <div
       className={`left-0 right-0 w-full h-screen bg-black fixed top-0 z-20 bg-opacity-50 order-input ${
-        isModalOpen ? "fixed" : "hidden"
+        isOpenOrderModal ? "fixed" : "hidden"
       }`}
       ref={modalRef}
     >
