@@ -26,11 +26,11 @@ export default function LoginSection() {
         }
       }
     };
-    document.addEventListener("click", (e: any) => {
+    document.addEventListener("click", (e: MouseEvent) => {
       handleClick(e);
     });
     return () => {
-      document.removeEventListener("click", (e: any) => {
+      document.removeEventListener("click", (e: MouseEvent) => {
         handleClick(e);
       });
     };

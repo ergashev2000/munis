@@ -63,7 +63,7 @@ export default function RegisterModal({
             <input
               type="text"
               id="fullname"
-              className="outline-none h-10 bg-transparent w-full pl-2 text-sm focus:border-black border rounded peer "
+              className="outline-none h-10 bg-transparent w-full pl-2 text-sm focus:border-black border rounded peer capitalize"
               value={userRegistorData.fullname}
               name="fullname"
               onChange={handleSetData}
@@ -73,10 +73,10 @@ export default function RegisterModal({
 
             <label
               htmlFor="fullname"
-              className={`text-[16px] pointer-events-none text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 cursor-text ${
-                userRegistorData.fullname
-                  ? "top-0"
-                  : "peer-focus:top-0 top-1/2 peer-focus:text-[14px]"
+              className={`peer-focus:text-[14px] text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 pointer-events-none cursor-text ${
+                !!userRegistorData.fullname
+                  ? "top-0 text-[14px]"
+                  : "peer-focus:top-0 top-1/2 text-[16px]"
               }`}
             >
               Ism va familiya <span className="text-red-500">*</span>
@@ -88,7 +88,6 @@ export default function RegisterModal({
               international
               withCountryCallingCode
               maxLength={17}
-              minLength={17}
               value={userRegistorData.phone}
               onChange={handleFillPhone}
               className="outline-none h-10 bg-transparent w-full pl-2 text-sm focus:border-black border rounded peer "
@@ -115,10 +114,10 @@ export default function RegisterModal({
 
             <label
               htmlFor="passwordId"
-              className={`text-[16px]  pointer-events-none text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 cursor-text ${
-                userRegistorData.password
-                  ? "top-0"
-                  : "peer-focus:top-0 top-1/2 peer-focus:text-[14px]"
+              className={`peer-focus:text-[14px] text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 pointer-events-none cursor-text ${
+                !!userRegistorData.password
+                  ? "top-0 text-[14px]"
+                  : "peer-focus:top-0 top-1/2 text-[16px]"
               }`}
             >
               Parol <span className="text-red-500">*</span>
@@ -138,10 +137,10 @@ export default function RegisterModal({
 
             <label
               htmlFor="checkpassword"
-              className={`text-[16px] text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 pointer-events-none cursor-text ${
-                userRegistorData.resetPassword
-                  ? "top-0"
-                  : "peer-focus:top-0 top-1/2 peer-focus:text-[14px]"
+              className={`peer-focus:text-[14px] text-gray-400 bg-white absolute py-0 left-2 -translate-y-1/2 transition-all duration-200 pointer-events-none cursor-text ${
+                !!userRegistorData.resetPassword
+                  ? "top-0 text-[14px]"
+                  : "peer-focus:top-0 top-1/2 text-[16px]"
               }`}
             >
               Parolni tasdiqlash <span className="text-red-500">*</span>
@@ -152,7 +151,7 @@ export default function RegisterModal({
               Kirish
             </Button>
           </div>
-          <div className=" text-[14px] text-center">
+          <div className="text-[14px] text-center">
             <p>
               Akkauntingiz bormi?{" "}
               <button
